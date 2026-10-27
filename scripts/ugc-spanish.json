@@ -1,0 +1,185 @@
+{
+  "appearance": "An adult Spanish woman, 25 years old, presenting an educational travel app walkthrough. She has long dark brown hair tied in a ponytail, warm brown eyes, and a friendly expressive face. She wears an opaque forest-green crew-neck T-shirt and a lightweight beige travel jacket. She is an outgoing, energetic travel enthusiast who is interested in meeting new people through Tips to Trip. A small backpack is visible on an empty chair behind her in a bright hostel common room with a window and plants. Authentic casual smartphone video, chest-up framing, natural daylight, realistic adult appearance, direct eye contact, warm smile, subtle natural hand gestures, camera fixed. Her face is centered and visible throughout. One uninterrupted shot, no other people, no screen inserts, no text, no subtitles, no logos. Native Spanish from Spain, clear young adult female voice, enthusiastic but conversational. Speak only the supplied Spanish dialogue, with clear pronunciation of the app and feature names. Clean speech audio, no music or background voices. Natural synchronized lip movement.",
+  "dialogues": [
+    "Me encanta viajar y conocer gente nueva. Por eso busco compañeros de aventura en Tips to Trip. En Meet Buddy, activa Go Live y mira quién está cerca, en el mapa o en la lista. Abre un perfil para ver su presentación, distancia y afinidad. ¿Te apetece hacer un plan? Escribe una nota, envía tu solicitud y revisa si sigue pendiente.",
+    "Puedes organizar tus solicitudes recibidas, aceptadas, enviadas y bloqueadas. Y para descubrir planes, entra en Near You. Ahí encuentras publicaciones locales, eventos y ofertas. Busca lo que te interesa o filtra por tipo de publicación. Explora las tarjetas y cambia al mapa para ver qué hay cerca. Así de fácil: conoce gente, encuentra un plan y comparte tu próxima aventura en la red de Tips to Trip."
+  ],
+  "scenes": [
+    {
+      "id": "01-hook",
+      "at": 0,
+      "duration": 7.2,
+      "presenter": 1,
+      "full": true,
+      "title": [
+        "Tu próxima aventura,",
+        "con gente nueva."
+      ],
+      "label": "MEET BUDDY + NEAR YOU"
+    },
+    {
+      "id": "02-browse",
+      "at": 7.2,
+      "duration": 7.3,
+      "presenter": 1,
+      "source": "Meet Buddy part 2.mov",
+      "start": 0,
+      "length": 8,
+      "title": [
+        "Encuentra gente cerca"
+      ],
+      "label": "MEET BUDDY",
+      "step": "01",
+      "side": [
+        "Activa Go Live",
+        "Explora el mapa",
+        "o la lista"
+      ]
+    },
+    {
+      "id": "03-profile",
+      "at": 14.5,
+      "duration": 7.5,
+      "presenter": 1,
+      "source": "Meet buddy.mov",
+      "start": 5,
+      "length": 3,
+      "title": [
+        "Conoce su perfil"
+      ],
+      "label": "MEET BUDDY",
+      "step": "02",
+      "side": [
+        "Presentación",
+        "Distancia",
+        "Afinidad"
+      ]
+    },
+    {
+      "id": "04-request",
+      "at": 22,
+      "duration": 5.5,
+      "presenter": 1,
+      "source": "Meet buddy.mov",
+      "start": 13,
+      "length": 14,
+      "title": [
+        "Empieza con un hola"
+      ],
+      "label": "MEET BUDDY",
+      "step": "03",
+      "side": [
+        "Escribe una nota",
+        "Envía tu",
+        "solicitud"
+      ]
+    },
+    {
+      "id": "05-sent",
+      "at": 27.5,
+      "duration": 2.5,
+      "presenter": 1,
+      "source": "Meet buddy.mov",
+      "start": 29,
+      "length": 6,
+      "title": [
+        "Solicitud enviada"
+      ],
+      "label": "MEET BUDDY",
+      "step": "04",
+      "side": [
+        "Solicitudes",
+        "enviadas",
+        "Ver respuesta"
+      ]
+    },
+    {
+      "id": "06-requests",
+      "at": 30,
+      "duration": 6,
+      "presenter": 2,
+      "source": "Meet Buddy part 2.mov",
+      "start": 13,
+      "length": 8,
+      "title": [
+        "Todo en un solo lugar"
+      ],
+      "label": "MEET BUDDY",
+      "step": "05",
+      "side": [
+        "Recibidas",
+        "Aceptadas",
+        "Enviadas"
+      ]
+    },
+    {
+      "id": "07-discover",
+      "at": 36,
+      "duration": 7,
+      "presenter": 2,
+      "source": "Near you.mov",
+      "start": 0,
+      "length": 4,
+      "title": [
+        "Descubre tu próximo plan"
+      ],
+      "label": "NEAR YOU",
+      "step": "01",
+      "side": [
+        "Publicaciones",
+        "Eventos",
+        "Ofertas"
+      ]
+    },
+    {
+      "id": "08-filters",
+      "at": 43,
+      "duration": 6.5,
+      "presenter": 2,
+      "source": "Near you.mov",
+      "start": 4,
+      "length": 15,
+      "title": [
+        "Explora lo que te gusta"
+      ],
+      "label": "NEAR YOU",
+      "step": "02",
+      "side": [
+        "Busca",
+        "Filtra por tipo",
+        "Explora el feed"
+      ]
+    },
+    {
+      "id": "09-map",
+      "at": 49.5,
+      "duration": 2.8,
+      "presenter": 2,
+      "source": "Near you.mov",
+      "start": 22,
+      "length": 4,
+      "title": [
+        "Mira qué hay cerca"
+      ],
+      "label": "NEAR YOU",
+      "step": "03",
+      "side": [
+        "Cambia al mapa",
+        "Descubre planes",
+        "a tu alrededor"
+      ]
+    },
+    {
+      "id": "10-close",
+      "at": 52.3,
+      "duration": 7.7,
+      "presenter": 2,
+      "full": true,
+      "title": [
+        "Conoce gente.",
+        "Comparte la aventura."
+      ],
+      "label": "TIPS TO TRIP"
+    }
+  ]
+}

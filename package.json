@@ -1,0 +1,31 @@
+{
+  "name": "tipstotripmarketing",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "tsx index.ts",
+    "typecheck": "tsc --noEmit",
+    "ugc:generate": "tsx scripts/generate-ugc.ts",
+    "ugc:render": "node scripts/render-ugc.mjs",
+    "ugc:voice": "tsx scripts/elevenlabs-voice.ts",
+    "ugc:voice:render": "node scripts/render-elevenlabs-ugc.mjs",
+    "ugc:product:render": "node scripts/render-product-ugc.mjs",
+    "ugc:product:captions": "node scripts/product-captions.mjs",
+    "ugc:product:verify": "node scripts/verify-product-ugc.mjs",
+    "ugc:meet-buddy:render": "node scripts/render-meet-buddy.mjs",
+    "ugc:meet-buddy:verify": "node scripts/verify-meet-buddy.mjs"
+  },
+  "dependencies": {
+    "@higgsfield/client": "^0.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "sharp": "^0.35.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

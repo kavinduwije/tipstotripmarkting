@@ -1,0 +1,529 @@
+# Seedance 2.5
+
+> Generates videos from text, images, video, and audio references, with optional audio generation.
+Supports videos up to 30 seconds with customizable resolution, aspect ratio, and output format.
+
+## Overview
+
+- **Endpoint**: `https://api.higgsfield.ai/bytedance/seedance-2.5/text-to-video`
+- **Model ID**: `bytedance/seedance-2.5/text-to-video`
+- **Category**: text2video
+- **Kind**: inference
+- **Tags**: new, banner, trending, partners, commercial_use
+
+## Pricing
+
+For 16:9 video without video input, your request costs roughly $0.2056 per second of generated video at 480p, $0.4622 at 720p, and $1.1372 at 1080p. Each 1,000 video tokens costs $0.0214 at 480p or 720p and $0.0234 at 1080p. Billable video tokens = ceil(output height × output width × (input video duration + generated video duration) × 24 / 1024). Image and audio references do not count as video input. Actual pricing depends on output dimensions and billable duration. Rates shown are before any applicable customer discount.
+
+## Authentication
+
+Keep credentials in server-side environment variables. The SDKs accept the same `KEY_ID:KEY_SECRET` value under their documented variable names.
+
+```bash
+export HF_CREDENTIALS="YOUR_KEY_ID:YOUR_KEY_SECRET" # TypeScript
+export HF_KEY="YOUR_KEY_ID:YOUR_KEY_SECRET"         # Python and cURL
+```
+
+The official SDKs configure the authorization header. Keep credentials server-side; the TypeScript SDK blocks browser use.
+
+## API Information
+
+Use `subscribe` to submit the model request and wait for a terminal result. TypeScript performs automatic polling with `withPolling: true`; Python's synchronous `subscribe` call also waits.
+
+### Input Parameters
+
+- **`prompt`** (`string`, _required_):
+  Write your prompt here
+
+- **`duration`** (`integer`, _optional_):
+  - Default: `5`
+
+- **`resolution`** (`string`, _optional_):
+  - Default: `"720p"`
+  - Options: `480p`, `720p`, `1080p`
+
+- **`aspect_ratio`** (`string`, _optional_):
+  - Default: `"16:9"`
+  - Options: `16:9`, `4:3`, `1:1`, `3:4`, `9:16`, `21:9`
+
+- **`bitrate_mode`** (`string`, _optional_):
+  - Default: `"high"`
+  - Options: `standard`, `high`
+
+- **`output_format`** (`string`, _optional_):
+  - Default: `"mp4"`
+  - Options: `mp4`, `mov`
+
+- **`generate_audio`** (`boolean`, _optional_):
+  - Default: `true`
+
+### Input JSON Schema
+
+```json
+{
+  "type": "object",
+  "required": [
+    "prompt"
+  ],
+  "properties": {
+    "prompt": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Write your prompt here"
+    },
+    "duration": {
+      "type": "integer",
+      "default": 5,
+      "maximum": 30,
+      "minimum": 4
+    },
+    "resolution": {
+      "enum": [
+        "480p",
+        "720p",
+        "1080p"
+      ],
+      "type": "string",
+      "default": "720p"
+    },
+    "aspect_ratio": {
+      "enum": [
+        "16:9",
+        "4:3",
+        "1:1",
+        "3:4",
+        "9:16",
+        "21:9"
+      ],
+      "type": "string",
+      "default": "16:9"
+    },
+    "bitrate_mode": {
+      "enum": [
+        "standard",
+        "high"
+      ],
+      "type": "string",
+      "default": "high"
+    },
+    "output_format": {
+      "enum": [
+        "mp4",
+        "mov"
+      ],
+      "type": "string",
+      "default": "mp4"
+    },
+    "generate_audio": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "additionalProperties": false
+}
+```
+
+### Required Parameters Example
+
+```json
+{
+  "prompt": "A cinematic scene at sunset",
+  "duration": 5,
+  "resolution": "720p",
+  "aspect_ratio": "16:9",
+  "bitrate_mode": "high",
+  "output_format": "mp4",
+  "generate_audio": true
+}
+```
+
+### Output Schema
+
+The shared polling endpoint returns one of the following status shapes:
+
+```json
+{
+  "title": "RequestStatus",
+  "oneOf": [
+    {
+      "title": "PendingRequestStatus",
+      "type": "object",
+      "properties": {
+        "request_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "status_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "cancel_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "queued",
+            "in_progress",
+            "nsfw",
+            "canceled"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "request_id"
+      ]
+    },
+    {
+      "title": "FailedRequestStatus",
+      "type": "object",
+      "properties": {
+        "request_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "status_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "cancel_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "status": {
+          "type": "string",
+          "const": "failed"
+        },
+        "error": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "request_id",
+        "error"
+      ]
+    },
+    {
+      "title": "CompletedRequestStatus",
+      "type": "object",
+      "properties": {
+        "request_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "status_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "cancel_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "status": {
+          "type": "string",
+          "const": "completed"
+        },
+        "video": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "url"
+          ]
+        },
+        "zip": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "url"
+          ]
+        },
+        "mov": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "url"
+          ]
+        },
+        "jsx": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "url"
+          ]
+        },
+        "fbx": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "url"
+          ]
+        },
+        "ply": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "url"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "request_id",
+        "video"
+      ]
+    }
+  ]
+}
+```
+
+## SDK Installation
+
+Install one of the official server-side SDKs:
+
+```bash
+npm install @higgsfield/client
+# or
+pip install higgsfield-client
+```
+
+## Usage Examples
+
+### TypeScript
+
+```typescript
+import { config, higgsfield } from "@higgsfield/client/v2";
+
+config({
+  credentials: process.env.HF_CREDENTIALS,
+});
+
+const result = await higgsfield.subscribe(
+  "bytedance/seedance-2.5/text-to-video",
+  {
+    input: {
+      "prompt": "A cinematic scene at sunset",
+      "duration": 5,
+      "resolution": "720p",
+      "aspect_ratio": "16:9",
+      "bitrate_mode": "high",
+      "output_format": "mp4",
+      "generate_audio": true
+    },
+    withPolling: true,
+  },
+);
+
+console.log(result);
+```
+
+### Python
+
+```python
+import higgsfield_client
+
+result = higgsfield_client.subscribe(
+    'bytedance/seedance-2.5/text-to-video',
+    arguments={'prompt': 'A cinematic scene at sunset',
+         'duration': 5,
+         'resolution': '720p',
+         'aspect_ratio': '16:9',
+         'bitrate_mode': 'high',
+         'output_format': 'mp4',
+         'generate_audio': True},
+)
+
+print(result)
+```
+
+### cURL
+
+```bash
+curl --request POST \
+  --url 'https://api.higgsfield.ai/bytedance/seedance-2.5/text-to-video' \
+  --header "Authorization: Key $HF_KEY" \
+  --header "Content-Type: application/json" \
+  --data @- <<'JSON'
+{
+  "prompt": "A cinematic scene at sunset",
+  "duration": 5,
+  "resolution": "720p",
+  "aspect_ratio": "16:9",
+  "bitrate_mode": "high",
+  "output_format": "mp4",
+  "generate_audio": true
+}
+JSON
+```
+
+## Additional Documentation
+
+# About
+
+**Seedance 2.5** uses the model ID `bytedance/seedance-2.5/text-to-video`. Seedance 2.5 generates videos from text prompts, allowing customization of duration, resolution, aspect ratio, output format, and optional audio generation. This model supports creating videos up to 30 seconds with flexible visual and audio settings.
+
+## 1. Calling the API
+
+Send requests to `https://api.higgsfield.ai/bytedance/seedance-2.5/text-to-video` with a JSON body matching the parameters below.
+
+### Install
+
+Install an official server-side SDK. cURL needs no package.
+
+```bash control=package group=install-typescript variant=npm label=npm when=javascript
+npm install @higgsfield/client
+```
+
+```bash control=package group=install-python variant=pip label=pip when=python
+pip install higgsfield-client
+```
+
+### Setup
+
+Keep credentials in server-side environment variables. The SDKs accept the same `KEY_ID:KEY_SECRET` value under their documented variable names.
+
+```bash
+export HF_CREDENTIALS="YOUR_KEY_ID:YOUR_KEY_SECRET" # TypeScript
+export HF_KEY="YOUR_KEY_ID:YOUR_KEY_SECRET"         # Python and cURL
+```
+
+### Request parameters
+
+| Parameter | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| `prompt` | `string` | Yes | `—` | Minimum length: 1. |
+| `duration` | `integer` | No | `5` | Minimum: 4. Maximum: 30. |
+| `resolution` | `string` | No | `"720p"` | Options: 480p, 720p, 1080p. |
+| `aspect_ratio` | `string` | No | `"16:9"` | Options: 16:9, 4:3, 1:1, 3:4, 9:16, 21:9. |
+| `output_format` | `string` | No | `"mp4"` | Options: mp4, mov. |
+| `generate_audio` | `boolean` | No | `true` |  |
+
+## 2. Authentication
+
+The official SDKs read credentials from the server environment and send the required `Authorization: Key KEY_ID:KEY_SECRET` header.
+
+### API Key
+
+Never expose the secret in browser-side code or commit it to source control. The TypeScript SDK is server-side only. For direct HTTP calls, use:
+
+```http
+Authorization: Key $HF_KEY
+```
+
+## 3. Queue
+
+`subscribe` submits the asynchronous request and waits for a terminal result. The TypeScript SDK polls automatically when `withPolling: true`; the Python SDK's synchronous `subscribe` call also waits. A completed request returns the generated file in the `video` field.
+
+### Submit and wait
+
+```ts control=language group=submit variant=javascript label=TypeScript
+import { config, higgsfield } from "@higgsfield/client/v2";
+
+config({
+  credentials: process.env.HF_CREDENTIALS,
+});
+
+const result = await higgsfield.subscribe(
+  "bytedance/seedance-2.5/text-to-video",
+  {
+    input: {
+      "prompt": "A cinematic scene at sunset",
+      "duration": 5,
+      "resolution": "720p",
+      "aspect_ratio": "16:9",
+      "output_format": "mp4",
+      "generate_audio": true
+    },
+    withPolling: true,
+  },
+);
+
+console.log(result);
+```
+
+```python control=language group=submit variant=python label=Python
+import higgsfield_client
+
+result = higgsfield_client.subscribe(
+    'bytedance/seedance-2.5/text-to-video',
+    arguments={'prompt': 'A cinematic scene at sunset',
+         'duration': 5,
+         'resolution': '720p',
+         'aspect_ratio': '16:9',
+         'output_format': 'mp4',
+         'generate_audio': True},
+)
+
+print(result)
+```
+
+```bash control=language group=submit variant=curl label=cURL
+curl --request POST \
+  --url 'https://api.higgsfield.ai/bytedance/seedance-2.5/text-to-video' \
+  --header "Authorization: Key $HF_KEY" \
+  --header "Content-Type: application/json" \
+  --data @- <<'JSON'
+{
+  "prompt": "A cinematic scene at sunset",
+  "duration": 5,
+  "resolution": "720p",
+  "aspect_ratio": "16:9",
+  "output_format": "mp4",
+  "generate_audio": true
+}
+JSON
+```
+
+### Explicit lifecycle control
+
+Use the Python SDK when a worker needs explicit status, result, or cancellation control for an existing request. The TypeScript v2 client currently exposes automatic polling through `subscribe`.
+
+```python
+import higgsfield_client
+
+request_id = "{request_id}"
+status = higgsfield_client.status(request_id=request_id)
+result = higgsfield_client.result(request_id=request_id)
+higgsfield_client.cancel(request_id=request_id)
+```
+
+## Additional Resources
+
+- [Model page](https://console.higgsfield.ai/models/bytedance/seedance-2.5/text-to-video)
+- [This LLM-readable document](https://dash.higgsfield.ai/models/bytedance/seedance-2.5/text-to-video/llms.txt)
+
+## Documentation Index
+
+- [Complete Higgsfield documentation](https://docs.higgsfield.ai/docs/llms.txt)

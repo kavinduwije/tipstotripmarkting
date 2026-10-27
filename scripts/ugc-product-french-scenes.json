@@ -1,0 +1,214 @@
+[
+  {
+    "id": "01-hook",
+    "at": 0,
+    "full": true,
+    "title": [
+      "Voyage solo.",
+      "Rencontre en route."
+    ],
+    "tag": "RENCONTRE · VOYAGE · DÉCOUVRE"
+  },
+  {
+    "id": "02-meet-map",
+    "at": 6,
+    "source": "Meet buddy.mov",
+    "start": 0,
+    "length": 4,
+    "feature": "Meet Buddy",
+    "title": "Des voyageurs près de toi",
+    "sub": "Active Go Live et explore la carte",
+    "step": "01",
+    "side": [
+      "À proximité",
+      "Un profil",
+      "Un premier bonjour"
+    ]
+  },
+  {
+    "id": "03-meet-profile",
+    "at": 10,
+    "source": "Meet buddy.mov",
+    "start": 4,
+    "length": 4,
+    "feature": "Meet Buddy",
+    "title": "Découvre son profil",
+    "sub": "Présentation, distance et affinités",
+    "step": "02",
+    "side": [
+      "Présentation",
+      "Distance",
+      "Affinités"
+    ]
+  },
+  {
+    "id": "04-meet-request",
+    "at": 11.4,
+    "source": "Meet buddy.mov",
+    "start": 13,
+    "length": 14,
+    "feature": "Meet Buddy",
+    "title": "Fais le premier pas",
+    "sub": "Un message, puis une demande",
+    "step": "03",
+    "side": [
+      "Ton message",
+      "Ta demande",
+      "Une rencontre"
+    ]
+  },
+  {
+    "id": "05-travel-browse",
+    "at": 15,
+    "source": "Travel buddy.mov",
+    "start": 0,
+    "length": 4,
+    "feature": "Travel Buddy",
+    "title": "Trouve ta prochaine escapade",
+    "sub": "Explore les voyages et destinations",
+    "step": "01",
+    "side": [
+      "Destination",
+      "Dates",
+      "Compagnie"
+    ]
+  },
+  {
+    "id": "06-travel-details",
+    "at": 18.3,
+    "source": "Travel buddy.mov",
+    "start": 4,
+    "length": 6,
+    "feature": "Travel Buddy",
+    "title": "Regarde les détails",
+    "sub": "Programme, dates et destination",
+    "step": "02",
+    "side": [
+      "Programme",
+      "Photos du voyage",
+      "Préférences"
+    ]
+  },
+  {
+    "id": "07-travel-join",
+    "at": 22.9,
+    "source": "Travel buddy.mov",
+    "start": 14,
+    "length": 5,
+    "feature": "Travel Buddy",
+    "title": "Demande à rejoindre le voyage",
+    "sub": "Request to Join → demande en attente",
+    "step": "03",
+    "side": [
+      "Envoie ta demande",
+      "Attends la réponse",
+      "Mes voyages"
+    ]
+  },
+  {
+    "id": "08-my-trips",
+    "at": 30,
+    "source": "Travel buddy post group chat.mov",
+    "start": 0,
+    "length": 3.5,
+    "feature": "Travel Buddy",
+    "title": "Tous tes voyages, ici",
+    "sub": "Demandes et voyages acceptés",
+    "step": "04",
+    "side": [
+      "Tes demandes",
+      "Voyages acceptés",
+      "Le chat du groupe"
+    ]
+  },
+  {
+    "id": "09-group-chat",
+    "at": 34.9,
+    "source": "Travel buddy post group chat.mov",
+    "start": 10,
+    "length": 6.5,
+    "feature": "Travel Buddy",
+    "title": "Préparez le voyage ensemble",
+    "sub": "Budget, programme et projets",
+    "step": "05",
+    "side": [
+      "Chat du groupe",
+      "Budget",
+      "Projets communs"
+    ]
+  },
+  {
+    "id": "10-hosting",
+    "at": 38.3,
+    "source": "Travel buddy post group chat.mov",
+    "start": 7,
+    "length": 2.7,
+    "feature": "Travel Buddy",
+    "title": "Tu organises ? Gère le groupe",
+    "sub": "Manage Requests → participants",
+    "step": "06",
+    "side": [
+      "Ton voyage",
+      "Participants",
+      "Les demandes"
+    ]
+  },
+  {
+    "id": "11-near-feed",
+    "at": 45,
+    "source": "Near you.mov",
+    "start": 0,
+    "length": 4,
+    "feature": "Near You",
+    "title": "Des idées près de toi",
+    "sub": "Événements, offres et publications",
+    "step": "01",
+    "side": [
+      "Événements",
+      "Offres",
+      "Idées locales"
+    ]
+  },
+  {
+    "id": "12-near-filters",
+    "at": 50.2,
+    "source": "Near you.mov",
+    "start": 11,
+    "length": 4,
+    "feature": "Near You",
+    "title": "Trouve ce qui te plaît",
+    "sub": "Recherche et filtre les publications",
+    "step": "02",
+    "side": [
+      "Recherche",
+      "Filtre",
+      "Découvre"
+    ]
+  },
+  {
+    "id": "13-near-map",
+    "at": 52.3,
+    "source": "Near you.mov",
+    "start": 22,
+    "length": 4,
+    "feature": "Near You",
+    "title": "Passe à la carte",
+    "sub": "Repère les plans autour de toi",
+    "step": "03",
+    "side": [
+      "Sur la carte",
+      "À proximité",
+      "Ton prochain plan"
+    ]
+  },
+  {
+    "id": "14-close",
+    "at": 54.9,
+    "full": true,
+    "title": [
+      "De nouvelles rencontres.",
+      "Ton prochain départ."
+    ],
+    "tag": "RENCONTRE · VOYAGE · DÉCOUVRE"
+  }
+]
