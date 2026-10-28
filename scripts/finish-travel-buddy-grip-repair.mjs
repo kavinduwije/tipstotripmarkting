@@ -1,0 +1,26 @@
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {spawnSync} from 'node:child_process';
+const root=new URL('../',import.meta.url).pathname,base=`${root}artifacts/travel-buddy-en`,edit=`${base}/edit`,rev=`${base}/revision-07`;
+const previous=`${base}/tips-to-trip-travel-buddy-en-58s-borderless-stores.mp4`,output=`${base}/tips-to-trip-travel-buddy-en-58s-hand-corrected.mp4`;
+mkdirSync(`${rev}/qa`,{recursive:true});
+const hash=f=>createHash('sha256').update(readFileSync(f)).digest('hex'),previousHash=hash(previous);
+function run(cmd,args){const p=spawnSync(cmd,args,{encoding:'utf8',maxBuffer:16*1024*1024});if(p.status!==0)throw new Error(`${cmd}: ${p.stderr.slice(-1800)}`);return p.stdout;}
+const ff=args=>run('ffmpeg',['-hide_banner','-v','error','-y',...args]);
+ff(['-loop','1','-framerate','30','-i',`${edit}/background.png`,'-i',`${rev}/hands-screen-composited.mp4`,'-framerate','30','-start_number','210','-i',`${edit}/final-overlays/%06d.png`,'-filter_complex_threads','1','-filter_complex','[1:v]scale=864:1536,crop=720:930:72:135,setsar=1[p];[0:v][p]overlay=0:170:shortest=1[b];[b][2:v]overlay=0:0:shortest=1[v]','-map','[v]','-an','-frames:v','1320','-r','30','-c:v','libx264','-crf','17','-preset','fast','-pix_fmt','yuv420p',`${rev}/final-hands-revised.mp4`]);
+ff(['-i',previous,'-i',`${rev}/final-hands-revised.mp4`,'-filter_complex_threads','1','-filter_complex','[0:v]split=2[a][b];[a]trim=end_frame=150,setpts=PTS-STARTPTS[head];[1:v]trim=end_frame=1320,setpts=PTS-STARTPTS[body];[b]trim=start_frame=1470:end_frame=1740,setpts=PTS-STARTPTS[tail];[head][body][tail]concat=n=3:v=1:a=0[v]','-map','[v]','-map','0:a:0','-map','0:s:0','-frames:v','1740','-t','58','-r','30','-c:v','libx264','-preset','fast','-crf','17','-pix_fmt','yuv420p','-c:a','copy','-c:s','copy','-disposition:s:0','0','-movflags','+faststart',output]);
+const probe=JSON.parse(run('ffprobe',['-v','error','-show_entries','stream=codec_type,codec_name,width,height,r_frame_rate,duration,nb_frames:format=duration','-of','json',output]));
+const v=probe.streams.find(s=>s.codec_type==='video');
+if(probe.format.duration!=='58.000000'||v.width!==720||v.height!==1280||v.nb_frames!=='1740'||v.r_frame_rate!=='30/1')throw new Error('Incorrect format');
+ff(['-xerror','-i',output,'-map','0:v','-map','0:a','-f','null','-']);
+const streamHash=(f,k)=>run('ffmpeg',['-v','error','-i',f,'-map',`0:${k}:0`,'-c','copy','-f','hash','-hash','sha256','-']).trim();
+const audioStreamUnchanged=streamHash(previous,'a')===streamHash(output,'a'),subtitleStreamUnchanged=streamHash(previous,'s')===streamHash(output,'s');
+if(!audioStreamUnchanged||!subtitleStreamUnchanged||hash(previous)!==previousHash)throw new Error('Original or retained streams changed');
+for(const [name,t] of [['entry',6.8],['from',7.93],['to',9.07],['calendar',10.2],['gallery',13.67],['preferences',17.73],['sharing',30],['requests',37.57],['chat',43],['closing',53.3],['endcard',56.5]])ff(['-ss',String(t),'-i',output,'-frames:v','1',`${rev}/qa/final-${name}.png`]);
+ff(['-i',output,'-vf','fps=1/2,scale=180:320,tile=6x5','-frames:v','1',`${rev}/qa/final-contact.jpg`]);
+const touches=JSON.parse(readFileSync(`${rev}/touch-validation.json`));
+if(touches.contactFrames!==24||!touches.allContactsInsideControls)throw new Error('Touch alignment failed');
+const sourceEdits={previousExport:previous,previousExportSha256:previousHash,output,outputSha256:hash(output),requestedChange:'Remove extra fingers from the device-holding hand throughout the app close-up.',affectedFinalTimes:[5,49],holdingHand:'One thumb on the left edge and four naturally curled fingers at the right/back edge.',asset:'clean-phone-plate.png',assetRepairProvider:'Built-in image_gen image edit; existing Higgsfield composition used as the edit reference.',nativeScreenSource:'../revision-05/entry-edit-plan.json and ../revision-03/app-screen-feed-touch-aligned.mp4',touchActionMap:'../revision-05/touch-action-map.json',method:'Recomposited the repaired static holding-hand plate with the same native screen homography, native app frame sequence and cached Higgsfield tapping-hand rig. No tap times changed.',priorEdits:'../revision-06/source-edits.json',audioStreamUnchanged,subtitleStreamUnchanged,originalsPreserved:true,backendClaim:false};
+writeFileSync(`${rev}/source-edits.json`,JSON.stringify(sourceEdits,null,2)+'\n');
+writeFileSync(`${rev}/verification.json`,JSON.stringify({output,outputSha256:hash(output),status:'technical-checks-passed-awaiting-visual-review',probe,fullDecodePassed:true,audioStreamUnchanged,subtitleStreamUnchanged,validatedContacts:touches.contactFrames,allContactsInsideControls:touches.allContactsInsideControls,sourceFileUnchanged:true,visualReviewPending:true,approvedFinalCampaign:false,priorVerification:'../revision-06/verification.json'},null,2)+'\n');
+console.log(JSON.stringify({output,fullDecodePassed:true,audioStreamUnchanged,subtitleStreamUnchanged,contacts:touches.contactFrames}));

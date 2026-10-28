@@ -1,0 +1,30 @@
+{
+  "campaign": "Du projet de voyage au groupe de discussion",
+  "directory": "artifacts/travel-buddy-fr",
+  "duration": 58,
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "language": "fr",
+  "speechLanguage": "French from France",
+  "voiceId": "1LGmj5ii3E9TWGSeoDC2",
+  "voiceDirection": "Native French from France; warm, clear, energetic and trustworthy adult female creator delivery. Reuse the existing reviewed custom French voice with fresh narration.",
+  "dialogues": [
+    {"id":"intro","at":0,"slot":5,"text":"Un voyage en tête ? Trouve ton compagnon d’aventure avec Tips to Trip."},
+    {"id":"create","at":5,"slot":10,"text":"Crée ton voyage. Donne-lui un nom, indique la France au départ et l’Espagne à l’arrivée. Choisis tes dates. Ajoute des étapes et des photos."},
+    {"id":"preferences","at":15,"slot":7,"text":"Définis ton budget, ton style de voyage et le profil de ton compagnon idéal."},
+    {"id":"details","at":22,"slot":7,"text":"Retrouve ton itinéraire, tes photos et tes préférences au même endroit. Ton voyage prend forme."},
+    {"id":"share","at":29,"slot":4,"text":"Partage ton voyage et trouve avec qui vivre l’aventure."},
+    {"id":"manage","at":33,"slot":7,"text":"Gère tes voyages et consulte les demandes. Choisis avec qui partir."},
+    {"id":"chat","at":40,"slot":9,"text":"Échangez dans le groupe de discussion. Partagez vos idées, posez vos questions et organisez ensemble les prochaines étapes de votre aventure."},
+    {"id":"outro","at":49,"slot":7,"text":"Ta prochaine aventure commence par une rencontre. Télécharge Tips to Trip et partez ensemble."}
+  ],
+  "portraits": [
+    {"id":"intro","seed":291001,"prompt":"Premium natural mobile-app commercial photography, vertical 9:16. One distinctive fictional French adult woman aged 26, deep brown skin, short natural black pixie haircut, dark brown eyes, wearing an opaque relaxed lilac linen long-sleeve blouse and tiny silver stud earrings. Beautiful rested comfortable face, relaxed shoulders, realistic skin texture, minimal makeup, warm confident smile. Bright warm off-white seamless studio, waist-up composition with headroom. She holds a large black smartphone vertically in her LEFT hand at chest height to the viewer's LEFT of her face, entire display facing camera, all four corners fully visible, screen well inside frame with margin on every side. Solid uniform vivid green chroma screen, no text, reflections or UI. Normal anatomically correct hands with one holding thumb and four curled fingers, five digits per hand only. Free hand rests naturally beside her. Fixed camera, flattering commercial light. No captions, logos, watermarks, extra people. Visually different from previous curly dark-haired sage-green presenter, long auburn-haired blue presenter, brunette bob striped presenter and blonde presenter."},
+    {"id":"outro","seed":291022,"prompt":"A single full-bleed professional studio camera photograph. One fictional French adult woman aged 28, shoulder-length softly waved chestnut-brown hair, light warm complexion, brown eyes, wearing an opaque relaxed coral cotton long-sleeve blouse and small gold stud earrings. Rested comfortable face, relaxed shoulders, realistic skin texture, warm friendly smile. Plain bright warm off-white seamless studio background. Waist-up composition with generous headroom. She holds one small black smartphone vertically in her left hand beside her face at chest height, facing the camera, all corners visible with generous margin around the phone. Only the small handheld phone screen is solid vivid chroma green. One holding thumb and four naturally curled fingers only. Other hand relaxed beside her waist. Natural flattering light and clean camera photograph. Entire image depicts one continuous studio scene, with exactly one woman and exactly one small handheld phone. No graphic design, no mockup, no app screenshot, no device frame around the photograph, no collage, no duplicate person, no borders, no lettering, no watermarks."}
+  ],
+  "sourceFiles": ["General-assesets/Meet Buddy/Trip creation - trip preferences - trip details.mov","General-assesets/Meet Buddy/Manage trip - group chat.mov"],
+  "demoEdits": "French narration, captions, promotional overlays and download badges only. App recordings retain their original English UI. Use the reviewed English revision 07 body: Trip to Spain with Spanish flag, From France, To Spain, Barcelona photos, fictional sharing contacts and corrected holding grip and touch timing. No French UI localisation.",
+  "music": "Reuse completed ElevenLabs instrumental; faded and ducked below speech.",
+  "inherits": "artifacts/travel-buddy-en/revision-07/"
+}

@@ -1,0 +1,80 @@
+{
+  "campaign": "De una idea de viaje al chat del grupo",
+  "directory": "artifacts/travel-buddy-es",
+  "duration": 58,
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "language": "es",
+  "voiceId": "LJa3ob2HevhqhJuHWsps",
+  "voiceDirection": "Spanish from Spain; bright, warm, energetic adult female narrator; natural creator delivery. Existing reviewed Spanish voice reused with fresh narration.",
+  "dialogues": [
+    {
+      "id": "intro",
+      "at": 0,
+      "slot": 5,
+      "text": "¿Tienes un viaje en mente? Encuentra a tu compañero de aventura en Tips to Trip."
+    },
+    {
+      "id": "create",
+      "at": 5,
+      "slot": 10,
+      "text": "Crea tu viaje. Escribe el nombre, elige el origen y el destino, añade las fechas y prepara tu ruta con lugares y fotos."
+    },
+    {
+      "id": "preferences",
+      "at": 15,
+      "slot": 7,
+      "text": "Define el presupuesto y tu estilo de viaje. Después, elige cómo sería tu compañero ideal."
+    },
+    {
+      "id": "details",
+      "at": 22,
+      "slot": 7,
+      "text": "Consulta todos los detalles: itinerario, fotos y preferencias. Tu plan, organizado en un solo lugar."
+    },
+    {
+      "id": "share",
+      "at": 29,
+      "slot": 4,
+      "text": "Comparte tu viaje y encuentra con quién vivir la aventura."
+    },
+    {
+      "id": "manage",
+      "at": 33,
+      "slot": 7,
+      "text": "Gestiona tus viajes, revisa las solicitudes y decide quién se une. Tú eliges con quién viajar."
+    },
+    {
+      "id": "chat",
+      "at": 40,
+      "slot": 9,
+      "text": "Hablad en el chat del grupo. Compartid ideas, resolved dudas y organizad los próximos pasos de vuestra aventura."
+    },
+    {
+      "id": "outro",
+      "at": 49,
+      "slot": 7,
+      "text": "Tu próxima aventura empieza con una conexión. Descarga Tips to Trip y viajad juntos."
+    }
+  ],
+  "portraits": [
+    {
+      "id": "intro",
+      "seed": 281001,
+      "prompt": "Premium natural mobile-app commercial photography, vertical 9:16. One fictional adult woman only, clear rested face, relaxed shoulders, realistic skin texture and minimal makeup. Bright warm off-white seamless studio. Waist-up composition, face in upper third with space above. She holds a large black smartphone vertically in her LEFT hand at chest height to the viewer's LEFT of her face, entire display facing camera, almost front-on, all four corners visible. Solid uniform vivid green chroma screen, no text, reflections or UI. Believable normal hands, five digits per hand; holding thumb on one edge and four curled fingers behind other edge, no extra fingertips. Free hand rests naturally to the side. Fixed camera commercial still, warm flattering light, no text, logos, watermarks or extra people. A new distinctive Spanish creator aged 26, long dark naturally curly hair worn loose, olive complexion, dark eyes, wearing a relaxed opaque sage-green linen long-sleeve blouse, small gold stud earrings. Warm confident friendly smile. Different from the prior short-bob brunette and blonde presenters."
+    },
+    {
+      "id": "outro",
+      "seed": 281002,
+      "prompt": "Premium natural mobile-app commercial photography, vertical 9:16. One fictional adult woman only, clear rested face, relaxed shoulders, realistic skin texture and minimal makeup. Bright warm off-white seamless studio. Waist-up composition, face in upper third with space above. She holds a large black smartphone vertically in her LEFT hand at chest height to the viewer's LEFT of her face, entire display facing camera, almost front-on, all four corners visible. Solid uniform vivid green chroma screen, no text, reflections or UI. Believable normal hands, five digits per hand; holding thumb on one edge and four curled fingers behind other edge, no extra fingertips. Free hand rests naturally to the side. Fixed camera commercial still, warm flattering light, no text, logos, watermarks or extra people. A different new Spanish creator aged 27, long straight auburn hair tucked behind one ear, light freckled complexion, hazel eyes, wearing a relaxed opaque powder-blue cotton long-sleeve shirt with sleeves casually rolled, small silver stud earrings. Confident friendly approachable expression. Different from the curly-haired opener and the previous blonde presenter."
+    }
+  ],
+  "sourceFiles": [
+    "General-assesets/Meet Buddy/Trip creation - trip preferences - trip details.mov",
+    "General-assesets/Meet Buddy/Manage trip - group chat.mov"
+  ],
+  "demoEdits": "Spanish editorial and caption localisation. Retain the reviewed native app journey, Trip to Spain flag entry, France/Spain selections, Barcelona gallery, fictional sharing contacts and anatomically corrected holding grip. Record all language adaptation; no backend claim.",
+  "music": "Reuse the completed original ElevenLabs instrumental travel-discovery score from the existing English campaign. Duck beneath speech, fade at both ends.",
+  "inherits": "artifacts/travel-buddy-en/revision-07/"
+}

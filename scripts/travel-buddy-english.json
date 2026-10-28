@@ -1,0 +1,29 @@
+{
+  "campaign": "From a travel idea to a group chat",
+  "directory": "artifacts/travel-buddy-en",
+  "duration": 60,
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "language": "en",
+  "voiceId": "Xb7hH8MSUJpSbSDYk0k2",
+  "voiceDirection": "Clear, engaging adult British female creator. Warm, energetic, trustworthy, comfortable conversational pace.",
+  "dialogues": [
+    {"id":"intro","at":0,"slot":7,"text":"Got a trip in mind? Find someone to share it with, on Tips to Trip."},
+    {"id":"create","at":7,"slot":10,"text":"Create a Travel Buddy post. Add your route, plan your days, and bring your itinerary to life with places and photos."},
+    {"id":"preferences","at":17,"slot":7,"text":"Choose your trip preferences, from budget and travel style to the kind of buddy you'd love to meet."},
+    {"id":"details","at":24,"slot":7,"text":"Your trip details bring the plan together. The stops, the photos, the preferences. All in one place."},
+    {"id":"share","at":31,"slot":4,"text":"Share your trip, and let the adventure find its people."},
+    {"id":"manage","at":35,"slot":7,"text":"Manage your trips, review requests, and decide who joins. You're in control of your travel plans."},
+    {"id":"chat","at":42,"slot":10,"text":"Then keep the conversation in the group chat. Share ideas, ask a question, and get ready to explore together."},
+    {"id":"outro","at":52,"slot":6,"text":"Your next adventure starts with a connection. Download the Tips to Trip app now."}
+  ],
+  "portraits": [
+    {"id":"brunette","seed":271025,"prompt":"Premium commercial photography, vertical 9:16. One attractive fictional adult female travel creator aged 25, short chestnut brown bob haircut, friendly confident face and natural makeup. Wearing an opaque white and soft pink horizontally striped long sleeve crop top, relaxed shoulders. Standing in a bright minimal off-white studio, softly sunlit. Waist-up composition, face in upper third, breathing room above. She holds a large black smartphone vertically in her left hand in the foreground at chest height, screen fully facing the camera, clean solid saturated chroma key green rectangular display with no text or symbols. Phone is below and to the viewer's left of her face; it does not cover her face. All four phone corners visible, straight vertical edges, almost front on. Her right hand makes a small natural open presenting gesture beside it. Realistic hands with five fingers. High-end camera, warm flattering light, clean modern international travel advertisement. No text, logos, watermarks or other people."},
+    {"id":"hands","seed":271026,"prompt":"Premium product commercial photography, vertical 9:16. Close-up of two realistic adult female hands with short natural nails and white and pink striped sleeve cuffs, presenting a large black smartphone upright against a softly lit warm off-white studio background. Straight on product camera, completely flat frontal phone display, no perspective tilt. Phone occupies 65 percent of picture width and 78 percent of picture height, perfectly centred, all four corners visible. One hand supports phone from below and along its left outside edge, other index fingertip is poised close to lower right edge of phone ready to tap. The entire screen is solid pure vivid chroma key green with no text or reflections, straight edges, discreet thin black bezel, no notch or UI. Only hands and forearms, no face. Refined professional light, anatomically correct five-finger hands, crisp phone edge. No text, logos, watermarks."},
+    {"id":"blonde","seed":271027,"prompt":"Premium commercial photography, vertical 9:16. One fictional adult fair-haired woman aged 24, clearly adult, shoulder-length blonde hair, warm confident smile, natural makeup, wearing a relaxed opaque white fitted t-shirt. Standing before a seamless pure white studio background, clean bright high-key lighting. Waist-up eye-level composition, face upper third, comfortable space above. She holds a black smartphone upright at chest height to the viewer's left of her face, screen fully facing camera, all four corners visible. The entire display is a solid vivid chroma key green, no text or reflections. Her free right hand points gently toward phone. Relaxed shoulders, professional creator energy, realistic hands, all five fingers, polished international mobile app commercial. No text, logos, watermarks or other people."}
+  ],
+  "sourceFiles": ["General-assesets/Meet Buddy/Trip creation - trip preferences - trip details.mov", "General-assesets/Meet Buddy/Manage trip - group chat.mov"],
+  "demoEdits": "Only the requested literal text promo may replace the recorded trip-name entry, using the recorded native field. Document the precise affected frames. No promo-code functionality or backend result is claimed.",
+  "music": "Reuse the completed original ElevenLabs instrumental travel-discovery score from the existing English campaign. Duck beneath speech, fade at both ends."
+}
