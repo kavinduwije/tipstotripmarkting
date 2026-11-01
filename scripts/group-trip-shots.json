@@ -1,0 +1,143 @@
+[
+  {
+    "id": "scene01-meltdown",
+    "at": 0,
+    "duration": 18,
+    "audio": true,
+    "lines": [
+      "hotel",
+      "city",
+      "messages",
+      "table"
+    ],
+    "prompt": "Scene 1: planning meltdown. The exact four friends sit around their dining table with a laptop, phones and handwritten travel notes. Muted indoor light. Start with a clear medium wide group shot, then quick conversational close-ups of the correct speaking friend and listener reactions. Maya confused about the hotel; Ben responds defensively but playfully; Zoe scrolls her phone looking overwhelmed; Leo delivers the dry joke. Mild overlapping reactions at the start, modest frustrated gestures. At 15 seconds all four sigh, pause and look at the mess in silence; no dialogue after 15 seconds. Their phones face themselves; laptop back faces camera. No visible phone interface. Distinct four characters, nobody disappears or changes identity."
+  },
+  {
+    "id": "scene02-suggestion",
+    "at": 18,
+    "duration": 12,
+    "audio": true,
+    "lines": [
+      "suggest",
+      "handle",
+      "find-out"
+    ],
+    "prompt": "Scene 2 in the same dining room and same four outfits. Start with Ben suddenly having a good idea and lifting his phone naturally. His phone screen faces him. Cut to Maya's sceptical amused reaction as she asks if it can handle the group, then back to Ben smiling as he replies. Zoe and Leo watch with hope. The light subtly warms, and camera slowly pushes towards the BACK of Ben's phone in the final two seconds to motivate an editorial cut to a real screen recording. No generated phone screen or interface."
+  },
+  {
+    "id": "scene03-reactions",
+    "at": 50,
+    "duration": 8,
+    "audio": true,
+    "lines": [
+      "have-plan",
+      "agree"
+    ],
+    "prompt": "Scene 3 reaction beat, same apartment table and four friends, now warm sunny lighting. Maya at left looks up from Ben's phone, surprised they have a plan. Leo in burgundy at right asks if everyone agrees. All four exchange impressed, slightly disbelieving looks and relaxed smiles. One subtle push-in then hold the group. Phones face the friends and never reveal screens."
+  },
+  {
+    "id": "lisbon-streets",
+    "at": 58,
+    "duration": 5,
+    "audio": false,
+    "prompt": "Scene 4 travel montage shot A. All four exact friends, same wardrobes and accessories, walking together through an authentic sunlit Alfama lane in Lisbon, Portugal, pastel yellow and pink stucco, azulejo tiles, cobbled paving. Establish the four walking into the lane, then a natural handheld gimbal follow with warm adventurous energy. Keep the four identifiable, no duplicated people, no costume changes. No talking to camera."
+  },
+  {
+    "id": "lisbon-pastries",
+    "at": 63,
+    "duration": 4,
+    "audio": false,
+    "prompt": "Scene 4 travel montage shot B. The four exact friends sit around a sunny Lisbon pavement cafe table, sharing four small pastel de nata pastries on white plates. Ben offers one pastry to Maya, Zoe laughs, Leo smiles. Natural small gestures and believable friendship, warm sunlight and shallow depth of field. Do not change their outfits or faces. No speech, no readable signage."
+  },
+  {
+    "id": "lisbon-itinerary",
+    "at": 67,
+    "duration": 3,
+    "audio": false,
+    "prompt": "Scene 4 travel montage shot C. Four exact friends pause beside a Lisbon azulejo wall. Ben holds his phone towards the group, all four lean in briefly to check today's plan and point down the street with anticipation. We see their faces and the BACK of the phone only, no screen UI or text. Medium shot, relaxed upbeat natural energy."
+  },
+  {
+    "id": "lisbon-selfie",
+    "at": 70,
+    "duration": 3,
+    "audio": false,
+    "prompt": "Scene 4 travel montage shot D. The same four adult friends bunch together for a laughing group selfie in a beautiful Lisbon cobbled square. Zoe holds a smartphone at arm's length, screen faces them and back faces the film camera. Each of the four distinct faces visible, spontaneous small laughs and authentic movement. No extra fingers or deformed arms, no screen UI."
+  },
+  {
+    "id": "lisbon-beach",
+    "at": 73,
+    "duration": 3,
+    "audio": false,
+    "prompt": "Scene 4 travel montage shot E. The exact four friends, same clothing and accessories, relaxing on a low sea wall above Carcavelos beach near Lisbon, with golden sand and Atlantic waves behind them. They sit together comfortably and look across the water, wind gently moves hair and linen. Warm late afternoon sunlight, cinematic steady camera. No swimwear changes, no dialogue."
+  },
+  {
+    "id": "scene04-sunset",
+    "at": 76,
+    "duration": 9,
+    "audio": true,
+    "lines": [
+      "worth-it",
+      "better"
+    ],
+    "prompt": "Scene 4 sunset viewpoint ending. The exact four friends stand together at Lisbon's Miradouro da Senhora do Monte, red tiled rooftops and Tagus in the distance, warm golden sunset. Medium close group composition, no crowds blocking faces. Zoe with loose wavy auburn hair and denim jacket makes the first warm amused remark to her friends, then Leo in burgundy replies. Maya and Ben smile while listening with closed mouths. After Leo finishes they quietly turn to enjoy the sunset together. Preserve exact cast and same wardrobes."
+  },
+  {
+    "id": "scene05-next",
+    "at": 85,
+    "duration": 12,
+    "audio": true,
+    "lines": [
+      "remember",
+      "next"
+    ],
+    "prompt": "Scene 5, blue-hour Lisbon pavement cafe after their final day. Same four friends in identical clothing and accessories seated around a small table, casually looking at trip photos on Ben's phone whose display faces the group, never camera. Maya asks her nostalgic question and all four laugh softly. Ben asks where to go next. At 9.7 seconds everyone starts suggesting destinations at once with amused gestures, then all stop and look knowingly at Ben's phone by 11.5 seconds. No extra intelligible words beyond the supplied soundtrack. Warm practical cafe lights, happy relaxed natural chemistry."
+  },
+  {
+    "id": "scene06-cta",
+    "at": 97,
+    "duration": 4,
+    "audio": true,
+    "lines": [
+      "cta-maya",
+      "cta-ben",
+      "cta-zoe",
+      "cta-leo"
+    ],
+    "prompt": "Scene 6 call to action, the exact four adult friends standing shoulder to shoulder in one line facing camera at a scenic Lisbon viewpoint, warm flattering light, comfortable eye-level medium wide shot. Each of the four faces fully visible and identity consistent. They say the single supplied short CTA together, warmly and conversationally, then smile at camera. Ben holds his phone at waist level with the display facing himself. Small friendly natural gestures, no exaggerated sales performance, no other speech, no generated logos or text. All four mouths synchronize to the supplied chorus audio."
+  },
+  {
+    "id": "planning-establish",
+    "at": 0,
+    "duration": 4,
+    "audio": false,
+    "prompt": "Planning meltdown establishing reaction shot in the same apartment dining room. Exactly the four friends sit around a cluttered rectangular table with four phones, open notebooks, loose travel notes and one open laptop seen from behind. They look mildly overwhelmed, exchanging confused looks and small frustrated gestures. One checks a phone, another spreads notes on the table. Dynamic natural group comedy, slightly muted indoor daylight, gentle handheld camera, all four visible and recognisable. Nobody speaks. No readable text or screens."
+  },
+  {
+    "id": "sunset-base",
+    "at": 76,
+    "duration": 4,
+    "audio": false,
+    "prompt": "The exact four friends stand close together at Lisbon Miradouro da Senhora do Monte at golden sunset, red tiled roofs and Tagus behind them. Front three-quarter medium wide group composition, order left to right Maya, Ben, Zoe, Leo. All four faces fully visible and large enough to see clearly, keep them close within the portrait frame. They quietly exchange warm smiles then look at the view. Zoe has long loose wavy auburn hair. No speech, closed mouths, relaxed shoulders."
+  },
+  {
+    "id": "next-base",
+    "at": 85,
+    "duration": 4,
+    "audio": false,
+    "prompt": "The exact four friends at a Lisbon pavement cafe at blue hour, warm cafe lamps and pastel tiled facade. Medium wide frontal group shot, order Maya, Ben, Zoe, Leo, all four faces fully visible close together. Ben holds a phone at waist level with its display facing the group, they look through memories and smile naturally. Phones and laptop screens never visible. No speech, lips closed, authentic relaxed friendship."
+  },
+  {
+    "id": "cta-base",
+    "at": 97,
+    "duration": 4,
+    "audio": false,
+    "prompt": "The exact four friends at a scenic Lisbon viewpoint at golden hour, red rooftops and river behind them. They stand shoulder to shoulder facing camera, in order Maya, Ben, Zoe, Leo. Portrait frame fits all four distinct faces without cutting anybody off. Comfortable eye-level medium wide framing, friendly relaxed expectant smiles with closed lips. Ben holds phone at waist level screen towards himself. No speech, no text or logo."
+  },
+  {
+    "id": "next-base-seated",
+    "at": 85,
+    "duration": 4,
+    "audio": false,
+    "prompt": "Scene 5 reference. Exactly the same four friends are ALL SEATED on cafe chairs closely around one small round outdoor cafe table in a lovely Lisbon pavement cafe at blue hour. Every friend is sitting down, hips visibly on chair seats, knees beneath table, table edge across the lower middle of the portrait composition. Nobody is standing. Preserve the four identities and all their specified clothing and accessories. Order from left to right Maya, Ben, Zoe, Leo. Medium wide eye-level frontal group composition with all four faces fully visible, similar seated group arrangement to the reference image. Warm cafe practical lights and pastel tiled facade. Ben holds his phone just above the tabletop with screen facing the friends, never camera; they lean in slightly to look through trip photos and exchange relaxed small smiles. No speech, closed mouths, no visible screen UI, no readable text, no extra people at the table."
+  }
+]

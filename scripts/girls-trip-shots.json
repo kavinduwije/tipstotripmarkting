@@ -1,0 +1,93 @@
+[
+  {
+    "id": "speaking-booking",
+    "speaker": "friend1",
+    "line": "booking",
+    "duration": 3,
+    "prompt": "Sofa planning scene. Ella glances up from a phone with amused frustration, addressing friends just beside camera."
+  },
+  {
+    "id": "speaking-agree-v2",
+    "speaker": "friend2",
+    "line": "agree",
+    "duration": 4,
+    "prompt": "Sofa planning scene. Sophie replies with lightly exasperated eyebrows, gesturing once with a snack."
+  },
+  {
+    "id": "speaking-itinerary-v2",
+    "speaker": "friend3",
+    "line": "itinerary",
+    "duration": 4,
+    "prompt": "Sofa planning scene. Chloe scrolls her phone, then looks up at her friends, puzzled and amused."
+  },
+  {
+    "id": "speaking-idea-v2",
+    "speaker": "friend4",
+    "line": "idea",
+    "duration": 4,
+    "prompt": "Same sofa, warmer hopeful light. Grace has an idea, sits upright a little and lifts her phone naturally, its back towards camera."
+  },
+  {
+    "id": "speaking-save",
+    "speaker": "friend1",
+    "line": "save",
+    "duration": 4,
+    "prompt": "Same sofa scene. Ella makes a small humorous pleading gesture to her friends, with a relieved half-smile."
+  },
+  {
+    "id": "cafe",
+    "duration": 4,
+    "prompt": "Exactly the same four friends and same clothes at a beautiful Barcelona pavement café, clinking four small white coffee cups together once over a table with pastel de nata. All four faces visible, spontaneous smiles, natural hands and small motions. Warm golden daylight, pastel tiles, cinematic shallow depth of field, no speech."
+  },
+  {
+    "id": "streets",
+    "duration": 3,
+    "prompt": "Same four women walking together through a colourful authentic El Born street in Barcelona, pastel facades, blue azulejo tiles and cobbled paving. All four identifiable, same wardrobe. Joyful steady gimbal follow, no talking."
+  },
+  {
+    "id": "selfie",
+    "duration": 3,
+    "prompt": "Same four women bunch together for a laughing group selfie in a sunny Barcelona square. Chloe holds one phone at arm’s length, back of phone towards camera. Four distinct faces visible, restrained believable movement, no talking."
+  },
+  {
+    "id": "beach",
+    "duration": 3,
+    "prompt": "Same four women laughing together seated on a low seawall at Barceloneta beach in Barcelona, Mediterranean waves and golden sand behind. Same outfits, hair gently in breeze, relaxed comfortable friendship, no speech."
+  },
+  {
+    "id": "sunset-base",
+    "duration": 3,
+    "frame": true,
+    "prompt": "Same four women shoulder to shoulder at Barcelona Bunkers del Carmel viewpoint at golden sunset, Barcelona rooftops and Mediterranean Sea behind. Frontal waist-up portrait group composition, all four faces equally clear, left to right Ella, Sophie, Chloe, Grace, same wardrobe. Friendly relaxed expressions, closed mouths, no speech. Each face fully within frame."
+  },
+  {
+    "id": "sunset-speaking",
+    "at": 43.3,
+    "duration": 6,
+    "base": "sunset-base",
+    "lines": [
+      "made-it",
+      "best"
+    ],
+    "prompt": "Keep the exact sunset viewpoint group composition and all four women. Ella at far left exclaims happily to her friends; Grace at far right replies warmly. Sophie and Chloe smile silently. Gentle natural smiles, no large gestures."
+  },
+  {
+    "id": "invitation",
+    "at": 49,
+    "duration": 7,
+    "base": "sunset-base",
+    "lines": [
+      "next",
+      "cta-1",
+      "cta-2",
+      "cta-3",
+      "cta-4"
+    ],
+    "prompt": "Same four women at the sunset viewpoint, shoulder to shoulder and facing the camera. Sophie, second from left, warmly invites the viewer first. All four then deliver the short download line together, smiling naturally after. Keep all faces visible and exact speaker assignments."
+  },
+  {
+    "id": "planning-reactions",
+    "duration": 4,
+    "prompt": "Exactly the four women from the reference on the same sofa in the same apartment, same assigned faces, hairstyles and clothes, laptop and snacks on the coffee table. All four fit comfortably in the vertical portrait frame, arranged closely in a shallow gentle arc. Quiet listening reaction shot: no one speaks, all lips remain closed throughout, small amused glances between friends, a shared comic sigh, slight smiles and subtle eyebrow movements. Nobody raises a phone towards camera. Fixed camera and continuous scene, no cuts, no zooming out, no added people. Exact identities and correct sage, cobalt, terracotta, ivory clothes."
+  }
+]

@@ -1,0 +1,284 @@
+{
+  "campaign": "Less planning chaos. More memories.",
+  "directory": "artifacts/group-trip-en",
+  "duration": 105,
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "language": "en",
+  "brandSpoken": "TipToTrip",
+  "brandAsset": "General-assesets/app_logo_white.png",
+  "cast": [
+    {
+      "id": "friend1",
+      "name": "Maya",
+      "age": 28,
+      "appearance": "British South Asian woman, warm medium-brown skin, oval face, dark brown eyes, shoulder-length straight black bob with centre part, small gold hoop earrings",
+      "wardrobe": "sage-green overshirt over ivory tee, dark straight jeans, white trainers, narrow tan crossbody bag",
+      "voice": "British English adult woman, grounded medium-low register, dry comic timing, conversational and warm"
+    },
+    {
+      "id": "friend2",
+      "name": "Ben",
+      "age": 29,
+      "appearance": "Black British man, deep brown skin, short neat natural curls, clean shaven, rectangular black spectacles",
+      "wardrobe": "rust-orange crew-neck tee, open cream short-sleeved linen shirt, navy trousers, dark trainers, simple black watch",
+      "voice": "British English adult man, clear warm mid register, upbeat resourceful delivery, relaxed and believable"
+    },
+    {
+      "id": "friend3",
+      "name": "Zoe",
+      "age": 27,
+      "appearance": "white adult woman, fair lightly freckled skin, long loose wavy auburn hair, brown eyes",
+      "wardrobe": "cobalt-blue tee, light denim jacket, sand-coloured trousers, white trainers, small mustard-yellow travel bag",
+      "voice": "British English adult woman, bright lightly textured higher register, curious playful delivery, natural conversational rhythm"
+    },
+    {
+      "id": "friend4",
+      "name": "Leo",
+      "age": 30,
+      "appearance": "British East Asian man, light-medium skin, short straight dark hair swept to the side, clean shaven",
+      "wardrobe": "burgundy crew-neck sweatshirt, stone chinos, cream trainers, navy canvas crossbody bag",
+      "voice": "British English adult man, mellow lower register, wry understated humour, soft easy laughter"
+    }
+  ],
+  "continuity": "Exactly these four fictional adult friends throughout. Lock faces, hair, glasses, earrings, bags and watches from the approved cast master. Planning day and all Lisbon scenes use the same specified wardrobe; no unexplained costume changes. Natural anatomy and modest gestures. No previous campaign characters or voices.",
+  "masterPrompt": "Photorealistic premium ensemble travel-comedy advertisement cast reference, vertical 9:16. Exactly four clearly adult fictional British friends, all distinctly visible around a small rectangular cafe table, waist-up and friendly natural expressions. Left to right: Maya, 28, British South Asian woman with medium-brown skin, straight black centre-part bob and small gold hoop earrings, sage overshirt over ivory tee; Ben, 29, Black British man with deep brown skin, neat short curls, clean shaven and rectangular black glasses, cream open linen shirt over rust-orange tee; Zoe, 27, white British woman with fair freckles and long auburn low ponytail, cobalt tee and pale denim jacket; Leo, 30, British East Asian man with short side-swept dark hair, clean shaven, burgundy sweatshirt. Four unique consistent faces, no resemblance to celebrities. The table contains phones seen from the back, a closed notebook, paper travel notes and a laptop seen from behind. Soft slightly muted indoor daylight, cosy contemporary apartment dining room, lived-in believable details. Medium wide frontal composition, all four heads fully visible with breathing room, distinct faces sharp and undistorted. Natural photographic skin, relaxed shoulders, gentle comedy. No readable screen, generated UI, captions, text, logos or watermarks.",
+  "sourceFiles": [
+    "General-assesets/Meet Buddy/Trip creation - trip preferences - trip details.mov",
+    "General-assesets/Meet Buddy/Manage trip - group chat.mov"
+  ],
+  "appPolicy": "Use actual supplied recordings. Do not generate interface text. Lisbon is the fictional friends' travel destination; do not relabel the recorded itinerary as Lisbon or claim an AI result absent from the recording. Render the four scripted chat comments as editorial quote cards beside actual chat footage, never as fabricated native messages. Preserve source recordings. Record all editorial overlays in source-edits.json.",
+  "scenes": [
+    {
+      "id": "01-meltdown",
+      "at": 0,
+      "end": 18,
+      "direction": "Four friends around the cluttered table. Quick reaction cuts and brief overlapping starts, notification sounds and playful sparse tension music. Leave a shared sigh and a beat of silence before 18 seconds.",
+      "onScreen": "Planning a group trip shouldn’t feel like this."
+    },
+    {
+      "id": "02-suggestion",
+      "at": 18,
+      "end": 30,
+      "direction": "Ben has the idea, lifts phone with screen turned towards friends. Maya sceptical, Ben smiles. Push towards phone; transition to upbeat warm colours. Any visible app insert must be actual recording."
+    },
+    {
+      "id": "03-shared-plan",
+      "at": 30,
+      "end": 58,
+      "direction": "Readable real app recordings alternate with reactions. Show trip creation, itinerary editing, preferences, sharing and group chat. Four scripted group-chat comments are editorial quotes outside the actual UI. Friends exchange impressed looks."
+    },
+    {
+      "id": "04-lisbon",
+      "at": 58,
+      "end": 85,
+      "direction": "Match cut from tap to Lisbon arrival. Separate shots: colourful Alfama streets; pastel de nata in a cafe; looking at the itinerary together with screen facing away; laughing group selfie; relaxed Carcavelos beach; sunset from a Lisbon miradouro. Same four friends, same clothes and accessories. Warm cinematic light, believable laughter, no imaginary landmarks."
+    },
+    {
+      "id": "05-next-adventure",
+      "at": 85,
+      "end": 97,
+      "direction": "At an outdoor Lisbon cafe after the final day, four friends review photos, laugh, start suggesting destinations over one another, then all stop and look knowingly at Ben's phone."
+    },
+    {
+      "id": "06-cta",
+      "at": 97,
+      "end": 105,
+      "direction": "The four friends face camera at a Lisbon viewpoint, say CTA together in their four distinct voices. Cut at 101 to a clean real-logo end card and hold for the full final four seconds.",
+      "onScreen": "Turn ‘we should go’ into ‘remember when?’",
+      "cta": "Download TipToTrip now.",
+      "endCardStart": 101
+    }
+  ],
+  "dialogues": [
+    {
+      "id": "hotel",
+      "speaker": "friend1",
+      "at": 0.8,
+      "slot": 3.0,
+      "text": "Wait… I thought you booked the hotel?"
+    },
+    {
+      "id": "city",
+      "speaker": "friend2",
+      "at": 3.6,
+      "slot": 2.8,
+      "text": "I was waiting for us to pick a city!"
+    },
+    {
+      "id": "messages",
+      "speaker": "friend3",
+      "at": 6.1,
+      "slot": 4.4,
+      "text": "Where’s that place you sent? We’ve got, like, 300 messages."
+    },
+    {
+      "id": "table",
+      "speaker": "friend4",
+      "at": 10.6,
+      "slot": 4.4,
+      "text": "At this rate, our holiday is happening at this table."
+    },
+    {
+      "id": "suggest",
+      "speaker": "friend2",
+      "at": 18.7,
+      "slot": 3.4,
+      "text": "Hey, let’s plan it with TipToTrip."
+    },
+    {
+      "id": "handle",
+      "speaker": "friend1",
+      "at": 22.6,
+      "slot": 2.5,
+      "text": "Can it handle this group?"
+    },
+    {
+      "id": "find-out",
+      "speaker": "friend2",
+      "at": 26,
+      "slot": 2.3,
+      "text": "Let’s find out."
+    },
+    {
+      "id": "lisbon-brief",
+      "speaker": "friend2",
+      "at": 30.4,
+      "slot": 6.5,
+      "text": "Okay, Travel Buddy. Three days in Lisbon. Good food, a little adventure, and time to relax."
+    },
+    {
+      "id": "sunset-idea",
+      "speaker": "friend3",
+      "at": 37.1,
+      "slot": 1.9,
+      "text": "And a sunset spot!"
+    },
+    {
+      "id": "intro-vo",
+      "speaker": "friend2",
+      "at": 39.3,
+      "slot": 10.8,
+      "text": "Meet TipToTrip. Create your trip, build an itinerary with Travel Buddy, and keep the conversation together in your group chat."
+    },
+    {
+      "id": "have-plan",
+      "speaker": "friend1",
+      "at": 51,
+      "slot": 2.6,
+      "text": "Wait… we actually have a plan?"
+    },
+    {
+      "id": "agree",
+      "speaker": "friend4",
+      "at": 54.2,
+      "slot": 1.9,
+      "text": "And we all agree?"
+    },
+    {
+      "id": "memories-vo",
+      "speaker": "friend2",
+      "at": 59,
+      "slot": 10.5,
+      "text": "Less time digging through messages. More time discovering places, sharing laughs, and making memories together."
+    },
+    {
+      "id": "worth-it",
+      "speaker": "friend3",
+      "at": 76,
+      "slot": 4.0,
+      "text": "Okay. This was worth getting out of the group chat."
+    },
+    {
+      "id": "better",
+      "speaker": "friend4",
+      "at": 80.5,
+      "slot": 2.5,
+      "text": "Even better than we planned."
+    },
+    {
+      "id": "remember",
+      "speaker": "friend1",
+      "at": 85.8,
+      "slot": 4.2,
+      "text": "Remember when we couldn’t even pick a city?"
+    },
+    {
+      "id": "next",
+      "speaker": "friend2",
+      "at": 91.1,
+      "slot": 3.0,
+      "text": "So… where are we going next?"
+    },
+    {
+      "id": "cta-maya",
+      "speaker": "friend1",
+      "at": 97.5,
+      "slot": 2.8,
+      "text": "Download TipToTrip now!"
+    },
+    {
+      "id": "cta-ben",
+      "speaker": "friend2",
+      "at": 97.5,
+      "slot": 2.8,
+      "text": "Download TipToTrip now!"
+    },
+    {
+      "id": "cta-zoe",
+      "speaker": "friend3",
+      "at": 97.5,
+      "slot": 2.8,
+      "text": "Download TipToTrip now!"
+    },
+    {
+      "id": "cta-leo",
+      "speaker": "friend4",
+      "at": 97.5,
+      "slot": 2.8,
+      "text": "Download TipToTrip now!"
+    },
+    {
+      "id": "destination-maya",
+      "speaker": "friend1",
+      "at": 94.2,
+      "slot": 1.5,
+      "text": "Rome!"
+    },
+    {
+      "id": "destination-ben",
+      "speaker": "friend2",
+      "at": 94.35,
+      "slot": 1.5,
+      "text": "Barcelona!"
+    },
+    {
+      "id": "destination-zoe",
+      "speaker": "friend3",
+      "at": 94.5,
+      "slot": 1.3,
+      "text": "Japan!"
+    },
+    {
+      "id": "destination-leo",
+      "speaker": "friend4",
+      "at": 94.6,
+      "slot": 1.3,
+      "text": "Iceland!"
+    }
+  ],
+  "chatQuotes": [
+    "Love the first day 🙌",
+    "Can we do the beach on Saturday?",
+    "Yes! Sunset after?",
+    "I’m in ☀️"
+  ],
+  "references": [
+    "https://docs.higgsfield.ai/docs/how-to/sdk",
+    "https://console.higgsfield.ai/models/wan/v2.7/image-to-video/api-reference",
+    "https://elevenlabs.io/docs/api-reference/text-to-voice/design",
+    "https://elevenlabs.io/docs/api-reference/text-to-speech/convert-with-timestamps"
+  ],
+  "voiceDirection": "Four international English-speaking adult friends. Distinct new youthful conversational ElevenLabs voices."
+}
