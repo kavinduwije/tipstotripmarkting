@@ -1,0 +1,136 @@
+{
+  "directory": "artifacts/meet-buddy-seedance25",
+  "title": "Who is taking the photos?",
+  "language": "en",
+  "duration": 35,
+  "videoModel": "bytedance/seedance-2.5/reference-to-video",
+  "voiceModel": "eleven_v4_turbo",
+  "musicModel": "music_v2_5",
+  "source": "General-assesets/Meet buddy.mov",
+  "brandKit": "brandKIT",
+  "cast": [
+    {
+      "id": "maya",
+      "reference": "General-assesets/Characters/Gemini_Generated_Image_heaor7heaor7heao.jpeg",
+      "description": "Fictional adult woman, age 26, dark shoulder-length bob and fringe, rust knit top and delicate gold necklaces. Preserve the exact supplied face.",
+      "voice": "cgSgspJ2msm6clMCkdW9"
+    },
+    {
+      "id": "ellie",
+      "reference": "General-assesets/Characters/Gemini_Generated_Image_8qrtg18qrtg18qrt.jpeg",
+      "description": "Fictional adult woman, age 26, short wavy light brown hair, navy knit top and delicate necklace. Preserve the exact supplied face.",
+      "voice": "FGY2WhTYpPnrIDTdsKH5"
+    },
+    {
+      "id": "sofia",
+      "reference": "General-assesets/Characters/Gemini_Generated_Image_7cna4g7cna4g7cna.jpeg",
+      "description": "Fictional adult woman, age 26, long wavy dark hair, mustard knit top and fine gold necklaces. Preserve the exact supplied face."
+    },
+    {
+      "id": "chloe",
+      "reference": "General-assesets/Characters/Gemini_Generated_Image_8v7nrp8v7nrp8v7n.jpeg",
+      "description": "Fictional adult woman, age 26, light brown shoulder-length hair, forest green knit top and silver necklace. Preserve the exact supplied face."
+    }
+  ],
+  "dialogues": [
+    {
+      "id": "hook",
+      "speaker": "maya",
+      "at": 0,
+      "slot": 4,
+      "text": "Solo trip booked. But who's taking the photos?",
+      "visual": "Speaking close-up with a small amused eyebrow raise; immediate hook, no intro slate.",
+      "tempo": 1
+    },
+    {
+      "id": "reveal",
+      "speaker": "maya",
+      "at": 4,
+      "slot": 4,
+      "text": "Meet Buddy. Find travellers nearby with Tips to Trip.",
+      "visual": "Immediate product reveal over the actual map recording.",
+      "tempo": 1
+    },
+    {
+      "id": "map",
+      "speaker": "maya",
+      "at": 8,
+      "slot": 4.5,
+      "text": "Go Live, explore the map, and open a profile.",
+      "visual": "Native map footage then profile, no invented controls or users.",
+      "tempo": 0.96
+    },
+    {
+      "id": "note",
+      "speaker": "maya",
+      "at": 12.5,
+      "slot": 5,
+      "text": "Like the vibe? Add a quick hello and send a meet request.",
+      "visual": "Native request sheet, note entry, then sending action.",
+      "tempo": 0.88
+    },
+    {
+      "id": "pending",
+      "speaker": "maya",
+      "at": 17.5,
+      "slot": 4,
+      "text": "Then check your requests while you wait for a reply.",
+      "visual": "Native Request sent profile and requests tabs. No acceptance implied.",
+      "tempo": 0.85
+    },
+    {
+      "id": "payoff",
+      "speaker": "maya",
+      "at": 21.5,
+      "slot": 4.5,
+      "text": "A coffee. A city walk. A plan worth sharing.",
+      "visual": "Illustrative four-friend coffee and walk montage, no claim the recorded request was accepted.",
+      "tempo": 1
+    },
+    {
+      "id": "cta",
+      "speaker": "ellie",
+      "at": 26,
+      "slot": 6,
+      "text": "Wherever you're going, make room for good company. Try Meet Buddy in Tips to Trip.",
+      "visual": "Second character supplies the final v4 Turbo voiceover across the silent walking montage and brand card. No unsynchronised speaking face shown.",
+      "tempo": 0.96
+    }
+  ],
+  "retention": [
+    "First-frame human face and relatable question",
+    "Product and benefit by 4 seconds",
+    "Visual change every 2-4 seconds",
+    "Second hook at 12.5 seconds: Like the vibe?",
+    "Short readable captions, native app evidence, no long tutorial detours",
+    "Friendship payoff followed by one clear CTA"
+  ],
+  "exports": [
+    {
+      "id": "vertical-9x16",
+      "width": 1080,
+      "height": 1920,
+      "placements": "Instagram Reels/Stories, TikTok, YouTube Shorts, Facebook Reels, Snapchat, Pinterest"
+    },
+    {
+      "id": "portrait-4x5",
+      "width": 1080,
+      "height": 1350,
+      "placements": "Instagram and Facebook portrait feed"
+    },
+    {
+      "id": "square-1x1",
+      "width": 1080,
+      "height": 1080,
+      "placements": "Square social feeds"
+    },
+    {
+      "id": "landscape-16x9",
+      "width": 1920,
+      "height": 1080,
+      "placements": "YouTube, Facebook, LinkedIn and X landscape"
+    }
+  ],
+  "closingAt": 29.5,
+  "productionDecision": "The optional second speaking take failed for insufficient Higgsfield API credits. Final edit uses the successfully generated Seedance 2.5 footage and closing voiceover."
+}

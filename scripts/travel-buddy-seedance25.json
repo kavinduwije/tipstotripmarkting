@@ -1,0 +1,154 @@
+{
+  "directory": "artifacts/travel-buddy-seedance25",
+  "title": "Another group chat. Still no trip?",
+  "language": "en",
+  "duration": 40,
+  "videoModel": "bytedance/seedance-2.5/reference-to-video",
+  "voiceModel": "eleven_v4_turbo",
+  "musicModel": "music_v2_5",
+  "source": "General-assesets/Travel Buddy/TravelBuddyPostCreationSharing.mov",
+  "brandKit": "brandKIT",
+  "cast": [
+    {
+      "id": "maya",
+      "reference": "General-assesets/Characters/Gemini_Generated_Image_heaor7heaor7heao.jpeg",
+      "description": "Fictional adult woman, age 26, dark shoulder-length bob and fringe, rust knit top and delicate gold necklaces. Preserve the exact supplied face.",
+      "voice": "cgSgspJ2msm6clMCkdW9"
+    },
+    {
+      "id": "ellie",
+      "reference": "General-assesets/Characters/Gemini_Generated_Image_8qrtg18qrtg18qrt.jpeg",
+      "description": "Fictional adult woman, age 26, short wavy light brown hair, navy knit top and delicate necklace. Preserve the exact supplied face.",
+      "voice": "FGY2WhTYpPnrIDTdsKH5"
+    },
+    {
+      "id": "sofia",
+      "reference": "General-assesets/Characters/Gemini_Generated_Image_7cna4g7cna4g7cna.jpeg",
+      "description": "Fictional adult woman, age 26, long wavy dark hair, mustard knit top and fine gold necklaces. Preserve the exact supplied face."
+    },
+    {
+      "id": "chloe",
+      "reference": "General-assesets/Characters/Gemini_Generated_Image_8v7nrp8v7nrp8v7n.jpeg",
+      "description": "Fictional adult woman, age 26, light brown shoulder-length hair, forest green knit top and silver necklace. Preserve the exact supplied face."
+    }
+  ],
+  "dialogues": [
+    {
+      "id": "hook",
+      "speaker": "ellie",
+      "at": 0,
+      "slot": 4,
+      "text": "Another group chat. Still no trip?",
+      "visual": "Ellie speaks directly to camera; amused frustration and a small eyebrow raise. New native Seedance 2.5 performance, with final ElevenLabs voice paced to observed dialogue timing.",
+      "tempo": 1
+    },
+    {
+      "id": "reveal",
+      "speaker": "maya",
+      "at": 4,
+      "slot": 4,
+      "text": "Travel Buddy turns your trip idea into a plan worth sharing.",
+      "visual": "Immediate actual Travel Buddy creation screen; product reveal at four seconds.",
+      "tempo": 1
+    },
+    {
+      "id": "details",
+      "speaker": "maya",
+      "at": 8,
+      "slot": 4,
+      "text": "Name your trip. Choose where you’re going and when.",
+      "visual": "Actual trip name, route and date fields.",
+      "tempo": 1
+    },
+    {
+      "id": "itinerary",
+      "speaker": "maya",
+      "at": 12,
+      "slot": 5,
+      "text": "Build your days, from Park Güell to the Sagrada Família.",
+      "visual": "Actual native day tabs and recorded Barcelona itinerary stops.",
+      "tempo": 1
+    },
+    {
+      "id": "photos",
+      "speaker": "maya",
+      "at": 17,
+      "slot": 4,
+      "text": "Add photos, so people can picture the adventure.",
+      "visual": "Native image picker with requested Barcelona photo replacements and original selected indicator; selected photo follows into post.",
+      "tempo": 1
+    },
+    {
+      "id": "preferences",
+      "speaker": "maya",
+      "at": 21,
+      "slot": 4,
+      "text": "Choose the travel style and company you’re looking for.",
+      "visual": "Recorded travel preference controls; retain actual selections.",
+      "tempo": 1
+    },
+    {
+      "id": "share",
+      "speaker": "maya",
+      "at": 25,
+      "slot": 5.5,
+      "text": "Then share your trip link with friends, straight from the app.",
+      "visual": "Native share sheet, copy link and service buttons. Replace suggested recipients with the campaign characters; no message sent.",
+      "tempo": 1
+    },
+    {
+      "id": "payoff",
+      "speaker": "ellie",
+      "at": 30.5,
+      "slot": 4,
+      "text": "Less back and forth. More Barcelona.",
+      "visual": "New silent Seedance 2.5 Barcelona friendship montage using all four supplied faces.",
+      "tempo": 1
+    },
+    {
+      "id": "cta",
+      "speaker": "ellie",
+      "at": 34.5,
+      "slot": 5.5,
+      "text": "Make the plan. Find your people. Try Travel Buddy in Tips to Trip.",
+      "visual": "Closing voiceover over the silent Barcelona montage and single-logo brand card.",
+      "tempo": 1
+    }
+  ],
+  "retention": [
+    "First-frame relatable group-chat frustration and speaking character",
+    "Travel Buddy reveal at 4 seconds",
+    "Native app cuts every 1.5–3 seconds",
+    "Barcelona photo reveal at 17 seconds",
+    "Share-link payoff by 25 seconds",
+    "Human Barcelona payoff followed by one download CTA"
+  ],
+  "exports": [
+    {
+      "id": "vertical-9x16",
+      "width": 1080,
+      "height": 1920,
+      "placements": "Instagram Reels/Stories, TikTok, YouTube Shorts, Facebook Reels, Snapchat, Pinterest"
+    },
+    {
+      "id": "portrait-4x5",
+      "width": 1080,
+      "height": 1350,
+      "placements": "Instagram and Facebook portrait feed"
+    },
+    {
+      "id": "square-1x1",
+      "width": 1080,
+      "height": 1080,
+      "placements": "Square social feeds"
+    },
+    {
+      "id": "landscape-16x9",
+      "width": 1920,
+      "height": 1080,
+      "placements": "YouTube, Facebook, LinkedIn and X landscape"
+    }
+  ],
+  "closingAt": 35.5,
+  "feature": "Travel Buddy"
+}
