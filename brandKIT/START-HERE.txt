@@ -1,0 +1,62 @@
+TIPSTOTRIP COMPANY BRAND KIT / VERSION 1.0 / NOVEMBER 2026
+
+Start with 01-Guidelines/TipsToTrip-Brand-Guidelines.pdf.
+The brand board in the same folder is a quick reference for collaborators.
+
+This is a proposed brand system built around the exact supplied logo. The logo
+file is copied byte for byte. Turquoise #14A9B7, Deep Teal #0F7F8C and Nunito
+continue the existing app's styling. Supporting colors, brand line, templates
+and layout rules are new recommendations. Existing product code is unchanged.
+
+EDITING
+- Install the Nunito and Inter variable TTF files in 04-Fonts on your computer.
+- Open SVG templates in a design editor that preserves SVG text and embedded PNGs.
+- SVG text, colors and vector graphics are editable. The original logo remains raster.
+- PNG exports use the correct fonts and are ready for digital use.
+- All contact fields in brackets are placeholders. Replace them before use.
+- Social and company banner templates use a general-purpose layout. Check actual
+  platform crops before publishing. The story leaves 250 px at top and bottom.
+
+LOGO
+- 02-Logo contains the supplied white-background PNG, unchanged at 1024 x 1024 px.
+- No transparent, monochrome, isolated-symbol or vector logo has been invented.
+- Retain the logo's full square. Add at least 12.5% external clear space per side.
+- Recommended minimum: 192 px digital or 48 mm print for this detailed artwork.
+- A vector master and dedicated small-size mark would require separate design work.
+
+PRINT
+- Business card: 1050 x 600 px PNG, tagged 300 ppi (3.5 x 2 inches). SVG at trim size.
+- A4 letterhead SVG: 794 x 1123 viewBox. Set to 210 x 297 mm before printing.
+- These are editable design masters, not press-ready PDFs. Ask your printer to
+  add the required bleed, crop marks and output profile before production.
+- CMYK percentages are mathematical approximations, not ICC conversions or
+  Pantone equivalents. Proof the colors on the intended paper stock.
+
+DIGITAL
+- 07-Digital contains reference CSS tokens and Dart color constants.
+- No existing app or website files were modified by building this kit.
+- CSS references fonts in ../04-Fonts. Keep that structure or update the URLs.
+- Email-Signature.html previews locally. Before pasting into email software,
+  replace the relative logo src with your publicly hosted absolute HTTPS logo URL.
+  Replace bracketed details, then test the signature in your email client.
+- Company legal name and NIF are taken from the supplied app repository.
+
+TYPE SOURCES AND LICENSES
+- Nunito: https://github.com/google/fonts/tree/main/ofl/nunito
+- Inter: https://github.com/google/fonts/tree/main/ofl/inter
+- Inter documentation: https://rsms.me/inter/
+Original variable fonts and their SIL Open Font License notices are included.
+The guide uses font instances for embedding; editable assets use the original
+family names. Existing logo lettering is not reset in either of these fonts.
+
+CONTENTS
+01-Guidelines: 12-page PDF, brand board PNG and editable SVG.
+02-Logo: exact supplied PNG.
+03-Colors: JSON palette and GIMP-compatible GPL swatches.
+04-Fonts: original variable TTFs and license files.
+05-Templates: three social formats, a company banner, two-sided business card,
+              A4 letterhead (each PNG + SVG) and an HTML email signature.
+06-Graphic-Elements: journey motif and pattern (PNG + SVG).
+07-Digital: CSS and Flutter color references.
+
+Design direction: Good tips. Great company.

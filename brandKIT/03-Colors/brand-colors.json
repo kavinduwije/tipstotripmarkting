@@ -1,0 +1,127 @@
+{
+  "brand": "TipsToTrip",
+  "version": "1.0",
+  "print_note": "CMYK values are mathematical starting points, not ICC conversions or Pantone matches. Proof with the printer.",
+  "colors": [
+    {
+      "name": "Turquoise",
+      "hex": "#14A9B7",
+      "rgb": [
+        20,
+        169,
+        183
+      ],
+      "cmyk_approx_percent": [
+        89,
+        8,
+        0,
+        28
+      ]
+    },
+    {
+      "name": "Deep Teal",
+      "hex": "#0F7F8C",
+      "rgb": [
+        15,
+        127,
+        140
+      ],
+      "cmyk_approx_percent": [
+        89,
+        9,
+        0,
+        45
+      ]
+    },
+    {
+      "name": "Sunshine",
+      "hex": "#FFCF33",
+      "rgb": [
+        255,
+        207,
+        51
+      ],
+      "cmyk_approx_percent": [
+        0,
+        19,
+        80,
+        0
+      ]
+    },
+    {
+      "name": "Coral",
+      "hex": "#F35D61",
+      "rgb": [
+        243,
+        93,
+        97
+      ],
+      "cmyk_approx_percent": [
+        0,
+        62,
+        60,
+        5
+      ]
+    },
+    {
+      "name": "Violet",
+      "hex": "#8061C3",
+      "rgb": [
+        128,
+        97,
+        195
+      ],
+      "cmyk_approx_percent": [
+        34,
+        50,
+        0,
+        24
+      ]
+    },
+    {
+      "name": "Ink",
+      "hex": "#18343B",
+      "rgb": [
+        24,
+        52,
+        59
+      ],
+      "cmyk_approx_percent": [
+        59,
+        12,
+        0,
+        77
+      ]
+    },
+    {
+      "name": "Mist",
+      "hex": "#EAF8F7",
+      "rgb": [
+        234,
+        248,
+        247
+      ],
+      "cmyk_approx_percent": [
+        6,
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "name": "White",
+      "hex": "#FFFFFF",
+      "rgb": [
+        255,
+        255,
+        255
+      ],
+      "cmyk_approx_percent": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

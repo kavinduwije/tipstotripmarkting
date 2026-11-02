@@ -1,0 +1,28 @@
+/* TipsToTrip proposed brand system v1.0. Reference tokens, not an app migration. */
+@font-face { font-family: 'Nunito'; src: url('../04-Fonts/Nunito-Variable.ttf') format('truetype'); font-weight: 200 1000; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('../04-Fonts/Inter-Variable.ttf') format('truetype'); font-weight: 100 900; font-style: normal; font-display: swap; }
+:root {
+  --brand-turquoise: #14A9B7;
+  --brand-deep-teal: #0F7F8C;
+  --brand-sunshine: #FFCF33;
+  --brand-coral: #F35D61;
+  --brand-violet: #8061C3;
+  --brand-ink: #18343B;
+  --brand-mist: #EAF8F7;
+  --brand-white: #FFFFFF;
+  --brand-muted: #49666C;
+  --brand-border: #CCE5E5;
+  --font-heading: 'Nunito', Arial, sans-serif;
+  --font-body: 'Inter', Arial, sans-serif;
+  --radius-card: 24px;
+  --radius-control: 12px;
+  --space-unit: 8px;
+  --text-primary: var(--brand-ink);
+  --text-secondary: var(--brand-muted);
+  --surface: var(--brand-white);
+  --surface-soft: var(--brand-mist);
+  --action-background: var(--brand-deep-teal);
+  --action-text: var(--brand-white);
+}
+.brand-button { background: var(--action-background); color: var(--action-text); font: 600 16px/1.25 var(--font-body); min-height: 48px; padding: 12px 24px; border: 0; border-radius: var(--radius-control); }
+.brand-button:focus-visible { outline: 3px solid var(--brand-ink); outline-offset: 3px; }
