@@ -1,0 +1,145 @@
+{
+  "title": "Maybe next year? Make a different plan.",
+  "directory": "artifacts/travel-buddy-carousel-en",
+  "duration": 60,
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "feature": "Travel Buddy",
+  "videoModel": "bytedance/seedance-2.5/text-to-video",
+  "nativeTextToVideo": true,
+  "nativeAccent": "American English",
+  "voiceModel": "eleven_multilingual_sts_v2",
+  "narratorVoice": "s3TPKV1kjDlVtZbl4Ksh",
+  "cast": [
+    {
+      "id": "alex",
+      "name": "Alex",
+      "age": 28,
+      "appearance": "a distinct fictional adult male traveller aged 28, warm olive skin, brown eyes, short slightly wavy dark brown hair, light natural stubble, cream cotton T-shirt under an unbuttoned muted rust linen shirt, no jewellery or glasses",
+      "voice": "s3TPKV1kjDlVtZbl4Ksh",
+      "dialogueVoice": "s3TPKV1kjDlVtZbl4Ksh"
+    }
+  ],
+  "continuity": "Warm late-afternoon natural light in an understated Sri Lankan coastal guesthouse courtyard. Documentary travel cinematography, realistic skin texture, relaxed comfortable posture, no commercial glamour retouching.",
+  "nativeAction": "Alex sits at a guesthouse courtyard table. He looks directly into the lens, with a small rueful smile on Maybe next year, then quiet resolve on different plan. His face and lips are fully visible, hands below frame. No phone or props. Restrained natural expression, no exaggerated gestures.",
+  "productionPolicy": {
+    "story": "Fictional real-life-style dramatisation, never a verified testimonial.",
+    "lipSync": "Review native speech wording, onset, pauses and visible mouth movements before any final ElevenLabs voice is generated; use Voice Changer preserving cadence.",
+    "app": "Actual supplied recordings. Creation and sharing recordings contain different example trips; label those separately and do not imply one continuous published post."
+  },
+  "dialogues": [
+    {
+      "id": "hook",
+      "speaker": "alex",
+      "at": 0,
+      "slot": 6,
+      "generationDuration": 8,
+      "native": true,
+      "text": "My friend said, maybe next year. So I made a different plan."
+    },
+    {
+      "id": "story",
+      "speaker": "alex",
+      "at": 6,
+      "slot": 5,
+      "native": false,
+      "text": "I still wanted the trip. I just needed people who wanted it too."
+    },
+    {
+      "id": "create",
+      "speaker": "alex",
+      "at": 11,
+      "slot": 14,
+      "native": false,
+      "text": "In Tips to Trip, open Travel Buddy. Add your route, dates and itinerary, choose your preferences, then publish your post.",
+      "voiceSegments": [
+        {
+          "sourceStart": 0,
+          "sourceEnd": 2.2,
+          "targetStart": 0
+        },
+        {
+          "sourceStart": 2.2,
+          "sourceEnd": 4.5,
+          "targetStart": 5.7
+        },
+        {
+          "sourceStart": 4.5,
+          "sourceEnd": 5.6,
+          "targetStart": 10.8
+        },
+        {
+          "sourceStart": 5.6,
+          "sourceEnd": 7.2,
+          "targetStart": 12.4
+        }
+      ]
+    },
+    {
+      "id": "share",
+      "speaker": "alex",
+      "at": 25,
+      "slot": 9,
+      "native": false,
+      "text": "Open a trip post. Tap share, then choose where to send it. Bring a friend into the plan."
+    },
+    {
+      "id": "chat",
+      "speaker": "alex",
+      "at": 34,
+      "slot": 10,
+      "native": false,
+      "text": "Once your group is together, use the trip chat for the details. Tickets, meet-up times, and who's bringing what."
+    },
+    {
+      "id": "payoff",
+      "speaker": "alex",
+      "at": 44,
+      "slot": 9,
+      "native": false,
+      "text": "A real plan. People who want to go. Less time waiting for everyone's calendar."
+    },
+    {
+      "id": "cta",
+      "speaker": "alex",
+      "at": 53,
+      "slot": 7,
+      "native": false,
+      "text": "Send this to your maybe next year friend. Start your Travel Buddy post on Tips to Trip."
+    }
+  ],
+  "broll": [
+    {
+      "id": "alone",
+      "duration": 5,
+      "prompt": "Show ONLY Alex seated at the same guesthouse table, looking thoughtfully past the camera at a quiet courtyard, then glancing down at a phone held low with its back toward the lens. No speech. Medium shot. Subtle slow lateral camera drift. A travel backpack rests beside the chair. Natural quiet anticipation."
+    },
+    {
+      "id": "planning",
+      "duration": 5,
+      "prompt": "Alex sits at a guesthouse cafe table with two new fictional adult friends aged around 26 to 30, one woman with dark curly hair and one man with short black hair, each with distinct faces and casual travel clothing. They look down at a single phone held low by Alex with its back toward camera. Natural small smiles, mouths closed, no dialogue or mimed speech. Medium three shot, gentle slider move. No tapping close-up or visible phone screen."
+    },
+    {
+      "id": "walk",
+      "duration": 5,
+      "prompt": "Alex and the exact same two fictional adult travel friends from the reference walk side by side slowly along a quiet Galle street near a white wall and palms in golden light. Preserve every face and item of clothing from the group reference. Alex is central and clearly recognisable. Relaxed small smiles, comfortable shoulders, natural strides. Smooth camera tracks backwards, medium-wide three shot. No phone, no speech or mimed talking.",
+      "reference": "group-master.png"
+    }
+  ],
+  "sources": [
+    "General-assesets/Travel Buddy/TravelBuddyPostCreationSharing.mov",
+    "General-assesets/Travel Buddy/Manage trip - group chat.mov"
+  ],
+  "references": [
+    "https://docs.higgsfield.ai/docs/how-to/sdk",
+    "https://open.higgsfield.ai/models/bytedance/seedance-2.5/text-to-video/api-reference",
+    "https://elevenlabs.io/docs/api-reference/speech-to-speech/convert",
+    "https://elevenlabs.io/docs/api-reference/text-to-speech/convert-with-timestamps",
+    "https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert"
+  ],
+  "brollVideoModel": "bytedance/seedance-2.5/reference-to-video",
+  "musicPrompt": "Original instrumental only, a premium sixty second realistic solo-travel friendship film. First twelve seconds: sparse cinematic suspense, restrained low pulses, dark airy pads, no melody fighting narration. At thirteen seconds shift into a warm optimistic modern indie electronic groove, 108 BPM, rounded bass, crisp understated drums, muted guitar and airy synth. Natural open human energy. Small rhythmic lift at twenty-five seconds for sharing, another at thirty-four for group chat, emotional sunny lift at forty-four for friends planning, warm resolve at fifty-six to sixty. Space for male narration throughout. No vocals, singing, chants, speech, vocal chops or harsh distortion.",
+  "impactDuration": 15,
+  "impactPrompt": "Cinematic trailer sound design, 15 seconds. Deep clean sub-bass thum-thum-thum hits and dark atmospheric pads build in tempo for 10 seconds. Metallic riser bends upward from 10 to 12 seconds. One deep braam impact at second 12, then spacious decaying reverb into silence by second 15. Clean transients, no clipping, speech, vocals or melody."
+}

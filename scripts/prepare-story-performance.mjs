@@ -1,4 +1,4 @@
-import{readFileSync,writeFileSync,mkdirSync}from'node:fs';
+import{readFileSync,writeFileSync,mkdirSync,existsSync}from'node:fs';
 import{spawnSync}from'node:child_process';
 const root=new URL('../',import.meta.url).pathname;
 const campaign=process.argv.find(x=>x.startsWith('--campaign='))?.slice(11)??'travel';
@@ -23,7 +23,8 @@ for(const s of spec.dialogues){
  if(norm(final.text)!==norm(s.text))throw Error(`Spoken wording needs independent review for ${s.id}; expected and transcript retained in campaign files.`);
  let trim=0,speed=1,words=final.words.filter(w=>w.type==='word').map(w=>({text:w.text,start:w.start,end:w.end})),timing;
  if(s.native){
-  const source=parse(`${qa}/${s.id}-native.scribe.json`),sw=source.words.filter(w=>w.type==='word');
+  const source=parse(`${qa}/${s.id}-native.scribe.json`),nativeAlignment=`${qa}/${s.id}-native.alignment.json`,finalAlignment=`${qa}/${s.id}-final.alignment.json`,sw=existsSync(nativeAlignment)?parse(nativeAlignment).words.filter(w=>w.text.trim()):source.words.filter(w=>w.type==='word');
+  if(existsSync(finalAlignment))words=parse(finalAlignment).words.filter(w=>w.text.trim()).map(w=>({text:w.text,start:w.start,end:w.end}));
   if(norm(source.text)!==norm(s.text))throw Error(`Native wording needs review for ${s.id}.`);
   for(const[label,file]of[['native',`${qa}/${s.id}-native.wav`],['final',sourceFile]])ff(['-i',file,'-ac','1','-ar','16000','-f','s16le',`${qa}/${s.id}-${label}.pcm`]);
   const a=energy(`${qa}/${s.id}-native.pcm`),b=energy(`${qa}/${s.id}-final.pcm`),windows=[];
@@ -43,9 +44,20 @@ for(const s of spec.dialogues){
  }else{
   const meta=parse(sourceFile+'.json');words=alignmentWords(meta.alignment);speed=Math.max(1,words.at(-1).end/(s.slot-.12));if(speed>1.15)throw Error(`Voiceover needs more breathing room: ${s.id}.`);
  }
- ff(['-i',sourceFile,'-af',`atrim=start=${trim},asetpts=PTS-STARTPTS,atempo=${speed},apad,atrim=duration=${s.slot}`,'-ar','48000','-ac','1','-c:a','pcm_s16le',`${edit}/audio-${s.id}.wav`]);
+ if(s.voiceSegments){
+  if(s.native||speed!==1)throw Error('Segmented narration requires off-screen unmodified-speed speech.');
+  const seg=s.voiceSegments;
+  if(seg.some((x,i)=>x.sourceStart<0||x.sourceEnd<=x.sourceStart||x.targetStart<0||x.targetStart+x.sourceEnd-x.sourceStart>s.slot+1e-6||(i&&x.targetStart<seg[i-1].targetStart+seg[i-1].sourceEnd-seg[i-1].sourceStart)))throw Error(`Invalid narration segments: ${s.id}`);
+  const sourcePCM=`${edit}/${s.id}-segments-source.pcm`,targetPCM=`${edit}/${s.id}-segments-timeline.pcm`;
+  ff(['-i',sourceFile,'-ar','48000','-ac','1','-f','s16le',sourcePCM]);
+  const sourceBytes=readFileSync(sourcePCM),timeline=Buffer.alloc(Math.round(s.slot*48000)*2);
+  for(const x of seg){const start=Math.round(x.sourceStart*48000)*2,end=Math.min(sourceBytes.length,Math.round(x.sourceEnd*48000)*2),target=Math.round(x.targetStart*48000)*2;if(end>start)sourceBytes.copy(timeline,target,start,end);}
+  writeFileSync(targetPCM,timeline);
+  ff(['-f','s16le','-ar','48000','-ac','1','-i',targetPCM,'-c:a','pcm_s16le',`${edit}/audio-${s.id}.wav`]);
+  words=words.map(w=>{const x=seg.find(x=>(w.start+w.end)/2>=x.sourceStart&&(w.start+w.end)/2<x.sourceEnd);if(!x)throw Error(`Narration word outside edit segments: ${s.id} ${w.text}`);return {...w,start:w.start-x.sourceStart+x.targetStart,end:w.end-x.sourceStart+x.targetStart};});
+ }else ff(['-i',sourceFile,'-af',`atrim=start=${trim},asetpts=PTS-STARTPTS,atempo=${speed},apad,atrim=duration=${s.slot}`,'-ar','48000','-ac','1','-c:a','pcm_s16le',`${edit}/audio-${s.id}.wav`]);
  words=words.map(w=>({...w,text:w.text.replace(/\bpractice\b/ig,'practise').replace(/MeetBuddy/ig,'Meet Buddy').replace(/travelers/ig,'travellers').replace(/traveler\b/ig,'traveller').replace(/traveling/ig,'travelling'),start:Math.max(0,(w.start-trim)/speed),end:Math.max(0,(w.end-trim)/speed)}));
- const row={id:s.id,at:s.at,slot:s.slot,native:s.native,trimSeconds:trim,speed,words,expected:s.text,transcript:final.text,timing};
+ const row={id:s.id,at:s.at,slot:s.slot,native:s.native,trimSeconds:trim,speed,audioSegments:s.voiceSegments,words,expected:s.text,transcript:final.text,timing};
  selection.dialogues.push(row);report.dialogues.push(row);console.log(`${s.id}: trim ${trim.toFixed(3)}s, tempo ${speed.toFixed(3)}, speech ends ${words.at(-1).end.toFixed(3)}s.`);
 }
 writeFileSync(`${dir}/performance-selection.json`,JSON.stringify(selection,null,2));writeFileSync(`${qa}/voice-timing.json`,JSON.stringify(report,null,2));
