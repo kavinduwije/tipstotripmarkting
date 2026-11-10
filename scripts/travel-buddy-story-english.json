@@ -1,0 +1,117 @@
+{
+  "duration": 60,
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "videoModel": "bytedance/seedance-2.5/reference-to-video",
+  "voiceModel": "eleven_multilingual_sts_v2",
+  "cast": [
+    {
+      "id": "erin",
+      "name": "Erin",
+      "age": 27,
+      "appearance": "fictional adult British woman aged 27, shoulder-length dark auburn hair, fair freckled skin, olive green linen overshirt over a cream crew-neck T-shirt, dark indigo trousers",
+      "voice": "s3TPKV1kjDlVtZbl4Ksh",
+      "dialogueVoice": "Xb7hH8MSUJpSbSDYk0k2"
+    },
+    {
+      "id": "nila",
+      "name": "Nila",
+      "age": 27,
+      "appearance": "fictional adult British Sri Lankan woman aged 27, warm medium brown skin, long dark wavy hair loosely tied back, terracotta short-sleeved linen shirt and cream trousers",
+      "voice": "s3TPKV1kjDlVtZbl4Ksh",
+      "dialogueVoice": "Xb7hH8MSUJpSbSDYk0k2"
+    }
+  ],
+  "continuity": "Quiet Sri Lankan coastal guesthouse courtyard and nearby Galle streets in warm late-afternoon sunshine. Authentic everyday travel, comfortable relaxed shoulders, natural skin texture and subtle documentary cinematography. Preserve the exact cast identity and clothing from the reference.",
+  "productionPolicy": {
+    "story": "Fictional dramatisation, never a verified customer testimonial.",
+    "lipSync": "Review native spoken performance and exact content BEFORE generating final voice; convert with ElevenLabs Voice Changer preserving cadence, independently review final timing.",
+    "privacy": "Replace every original contact DP, name and photo-gallery image in every included frame. Record modifications in demo/source-edits.json.",
+    "app": "Actual supplied recordings and preserved native UI controls; demonstration edits are not evidence of a live backend update."
+  },
+  "directory": "artifacts/travel-buddy-story-en",
+  "title": "Stop saying someday. Start your Travel Buddy plan.",
+  "feature": "Travel Buddy",
+  "opener": [
+    "STOP SAYING",
+    "SOMEDAY.",
+    "MAKE THE PLAN."
+  ],
+  "dialogues": [
+    {
+      "id": "hook",
+      "speaker": "erin",
+      "at": 3,
+      "slot": 7,
+      "text": "That trip you've been talking about? Make a plan. Find your people. Let's go.",
+      "native": true
+    },
+    {
+      "id": "create",
+      "speaker": "erin",
+      "at": 10,
+      "slot": 9,
+      "text": "Open Travel Buddy in Tips to Trip. Create a post with your route, dates and the places you want to explore.",
+      "native": false
+    },
+    {
+      "id": "gallery",
+      "speaker": "erin",
+      "at": 19,
+      "slot": 8,
+      "text": "Plan your days, add travel photos, and choose what matters to you in a travel buddy.",
+      "native": false
+    },
+    {
+      "id": "share",
+      "speaker": "erin",
+      "at": 28,
+      "slot": 7,
+      "text": "Have a trip to share? Open its details and send the post to your friends.",
+      "native": false
+    },
+    {
+      "id": "manage",
+      "speaker": "erin",
+      "at": 35,
+      "slot": 7,
+      "text": "Manage your trips and review who wants to join. You choose who comes along.",
+      "native": false
+    },
+    {
+      "id": "chat",
+      "speaker": "erin",
+      "at": 42,
+      "slot": 8,
+      "text": "Then use your trip group chat to share ideas, ask questions, and bring everyone into the plan.",
+      "native": false
+    },
+    {
+      "id": "cta",
+      "speaker": "erin",
+      "at": 50,
+      "slot": 7,
+      "text": "From a trip idea to a group chat. Start your Travel Buddy post on Tips to Trip.",
+      "native": true
+    }
+  ],
+  "broll": [
+    {
+      "id": "planning",
+      "duration": 5,
+      "prompt": "Erin and Nila sit together at a guesthouse cafe table, looking down at a single smartphone held low by Erin, its back facing camera and screen never visible. Nila nods and points gently towards a closed paper notebook on the table. Small natural smiles, no visible speech, mouths closed. Medium two shot, no tapping close-up."
+    },
+    {
+      "id": "walk",
+      "duration": 5,
+      "prompt": "Erin and Nila walk side by side slowly along a quiet Galle street near a white wall and palms, natural small smiles, relaxed shoulders and gentle strides. Camera tracks smoothly backwards, medium-wide two shot. No phone, no speech, no crowds."
+    }
+  ],
+  "sources": [
+    "General-assesets/Travel Buddy/TravelBuddyPostCreationSharing.mov",
+    "General-assesets/Travel Buddy/Manage trip - group chat.mov"
+  ],
+  "narratorVoice": "s3TPKV1kjDlVtZbl4Ksh",
+  "voiceArrangement": "User-approved: Adam off-screen narrator; natural female ElevenLabs voice for reviewed native on-camera character dialogue."
+}

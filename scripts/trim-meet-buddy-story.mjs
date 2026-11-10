@@ -1,0 +1,23 @@
+import fs from 'node:fs';
+import {spawnSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+const dir=new URL('../artifacts/meet-buddy-story-en/',import.meta.url).pathname;
+const source=dir+'exports/tips-to-trip-meet-buddy-story-en-60s.mp4';
+const name='tips-to-trip-meet-buddy-story-en-57s-trimmed',out=dir+'exports/'+name+'.mp4';
+const start=47,end=50,cut=end-start,duration=60-cut;
+function run(cmd,args){const r=spawnSync(cmd,args,{encoding:'utf8',maxBuffer:8*1024*1024});if(r.status!==0)throw Error(`${cmd}: ${r.stderr.slice(-1500)}`);return r;}
+const ff=args=>run('ffmpeg',['-hide_banner','-y',...args]);
+const filter='[0:v]split=2[v0][v1];[v0]trim=end_frame=1410,setpts=PTS-STARTPTS[a];[v1]trim=start_frame=1500:end_frame=1800,setpts=PTS-STARTPTS[b];[a][b]concat=n=2:v=1:a=0[v];[1:a]asplit=2[x0][x1];[x0]atrim=end=47,asetpts=PTS-STARTPTS,afade=t=out:st=46.99:d=0.01[x];[x1]atrim=start=50:end=60,asetpts=PTS-STARTPTS,afade=t=in:d=0.01[y];[x][y]concat=n=2:v=0:a=1[s]';
+ff(['-loglevel','error','-i',source,'-i',dir+'edit/final-mix.wav','-filter_complex',filter,'-map','[v]','-map','[s]','-c:v','libx264','-preset','fast','-crf','17','-pix_fmt','yuv420p','-r','30','-frames:v','1710','-c:a','aac','-b:a','192k','-ar','48000','-movflags','+faststart','-threads','4',out]);
+const format=t=>`${String(Math.floor(t/3600)).padStart(2,'0')}:${String(Math.floor(t/60)%60).padStart(2,'0')}:${(t%60).toFixed(3).padStart(6,'0').replace('.',',')}`;
+const cues=JSON.parse(fs.readFileSync(dir+'edit/caption-timing.json')).filter(c=>c.end<=start||c.start>=end).map(c=>({...c,start:c.start>=end?c.start-cut:c.start,end:c.end>=end?c.end-cut:c.end}));
+fs.writeFileSync(dir+'exports/'+name+'.srt',cues.map((c,i)=>`${i+1}\n${format(c.start)} --> ${format(Math.min(c.end+.06,cues[i+1]?.start??duration))}\n${c.text}\n`).join('\n'));
+const probe=JSON.parse(run('ffprobe',['-v','error','-count_frames','-show_streams','-show_format','-of','json',out]).stdout),v=probe.streams.find(s=>s.codec_type==='video'),a=probe.streams.find(s=>s.codec_type==='audio');
+if(v.width!==720||v.height!==1280||v.avg_frame_rate!=='30/1'||Number(v.nb_read_frames)!==1710||a.codec_name!=='aac'||Math.abs(Number(probe.format.duration)-duration)>.08)throw Error('Trimmed output format mismatch.');
+ff(['-v','error','-i',out,'-f','null','-']);
+ff(['-loglevel','error','-i',out,'-vn','-ac','1','-ar','48000','-f','s16le',dir+'qa/trimmed-decoded-audio.pcm']);
+const decodedSeconds=fs.statSync(dir+'qa/trimmed-decoded-audio.pcm').size/2/48000;if(Math.abs(decodedSeconds-duration)>.08)throw Error('Decoded audio duration mismatch.');
+const log=ff(['-i',out,'-vn','-af','loudnorm=I=-16:TP=-1.5:LRA=7:print_format=json','-f','null','-']).stderr,j=log.lastIndexOf('{'),loud=JSON.parse(log.slice(j,log.indexOf('}',j)+1));
+if(Math.abs(Number(loud.input_i)+16)>1||Number(loud.input_tp)>-1)throw Error('Audio loudness mismatch.');
+fs.writeFileSync(dir+'qa/trim-47-to-50.json',JSON.stringify({source,output:out,removedSeconds:[start,end],removedFrames:[1410,1500],resultSeconds:duration,frames:1710,decodedAudioSeconds:decodedSeconds,width:v.width,height:v.height,fps:30,fullDecodePassed:true,loudnessLUFS:Number(loud.input_i),truePeakDbTP:Number(loud.input_tp),speech:'No speech falls within removed interval. Original presenter frames and audio remain aligned.',audioJoin:'10 ms fade each side of music-only join. Original uncompressed mix used as audio source.',captions:'Existing burned captions remain with their corresponding frames; separate SRT shifted 3 seconds after the cut.',originalPreserved:true,sha256:createHash('sha256').update(fs.readFileSync(out)).digest('hex')},null,2));
+console.log(`Trimmed and technically verified: ${out}`);

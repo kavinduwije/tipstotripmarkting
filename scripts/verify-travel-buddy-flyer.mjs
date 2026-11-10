@@ -1,0 +1,18 @@
+import fs from 'node:fs';import{spawnSync}from'node:child_process';import{createHash}from'node:crypto';
+const cleanHeader=process.argv.includes('--clean-header');
+const root=new URL('../',import.meta.url).pathname,original=root+'artifacts/travel-buddy-flyer-en',dir=original+(cleanHeader?'/clean-header':''),file=dir+'/exports/tips-to-trip-travel-buddy-flyer-en-15s'+(cleanHeader?'-clean-header':'')+'.mp4';
+function run(cmd,args){const r=spawnSync(cmd,args,{encoding:'utf8',maxBuffer:8*1024*1024});if(r.status!==0)throw Error(r.stderr.slice(-1500));return r;}
+const ff=args=>run('ffmpeg',['-hide_banner','-y',...args]);
+const p=JSON.parse(run('ffprobe',['-v','error','-count_frames','-show_format','-show_streams','-of','json',file]).stdout),v=p.streams.find(s=>s.codec_type==='video'),a=p.streams.find(s=>s.codec_type==='audio');
+if(v.width!==1080||v.height!==1920||v.avg_frame_rate!=='30/1'||Number(v.nb_read_frames)!==450||a.channels!==2||a.codec_name!=='aac'||Number(a.sample_rate)!==48000||Math.abs(Number(p.format.duration)-15)>.05)throw Error('Flyer format mismatch.');
+ff(['-v','error','-i',file,'-f','null','-']);
+if(cleanHeader){
+ const audioHash=f=>ff(['-v','error','-i',f,'-map','0:a:0','-c','copy','-f','hash','-hash','sha256','-']).stdout.trim();
+ if(audioHash(file)!==audioHash(original+'/exports/tips-to-trip-travel-buddy-flyer-en-15s.mp4'))throw Error('Audio stream changed during visual revision.');
+}
+const frames=JSON.parse(run('ffprobe',['-v','error','-select_streams','v:0','-show_frames','-show_entries','frame=pts_time,color_space,color_primaries,color_transfer','-of','json',file]).stdout).frames;if(frames.some((f,i)=>Math.abs(Number(f.pts_time)-i/30)>.001||f.color_space!=='bt709'))throw Error('Frame timing or colour metadata mismatch.');
+for(const[name,input]of[['decoded',file],['reference',dir+'/edit/final-music.wav']])ff(['-v','error','-i',input,'-vn','-ar','48000','-ac','1','-f','s16le',dir+'/qa/'+name+'.pcm']);
+const pcm=n=>{const b=fs.readFileSync(dir+'/qa/'+n+'.pcm');return new Int16Array(b.buffer,b.byteOffset,b.length/2);},x=pcm('reference'),y=pcm('decoded');let xx=0,yy=0,xy=0;for(let i=0;i<Math.min(x.length,y.length);i++){xx+=x[i]*x[i];yy+=y[i]*y[i];xy+=x[i]*y[i];}const corr=xy/Math.sqrt(xx*yy),seconds=y.length/48000;if(corr<.98||Math.abs(seconds-15)>.05)throw Error('Music timing mismatch.');
+const log=ff(['-i',file,'-vn','-af','loudnorm=I=-16:TP=-2.5:LRA=7:print_format=json','-f','null','-']).stderr,j=log.lastIndexOf('{'),loud=JSON.parse(log.slice(j,log.indexOf('}',j)+1));if(Math.abs(Number(loud.input_i)+16)>1||Number(loud.input_tp)>-1)throw Error('Audio loudness mismatch.');
+const review=JSON.parse(fs.readFileSync(dir+'/qa/visual-review.json'));if(!review.approved)throw Error('Visual approval required.');
+const result={passed:true,file,checkedAt:new Date().toISOString(),width:v.width,height:v.height,fps:30,frames:450,duration:Number(p.format.duration),fullDecodePassed:true,continuousFrameTiming:true,consistentColourSpace:'bt709',decodedAudioSeconds:seconds,musicReferenceCorrelation:corr,loudnessLUFS:Number(loud.input_i),truePeakDbTP:Number(loud.input_tp),musicSource:JSON.parse(fs.readFileSync(dir+'/qa/music-provenance.json')),visualReview:review,bytes:fs.statSync(file).size,sha256:createHash('sha256').update(fs.readFileSync(file)).digest('hex')};fs.writeFileSync(dir+'/qa/final-verification.json',JSON.stringify(result,null,2));fs.writeFileSync(dir+'/production-status.json',JSON.stringify({status:'completed',file,verification:'qa/final-verification.json'},null,2));console.log(`Verified: 15s, 1080x1920, 450 frames, same original music, ${loud.input_i} LUFS.`);

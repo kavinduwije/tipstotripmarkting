@@ -1,0 +1,126 @@
+{
+  "duration": 60,
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "videoModel": "bytedance/seedance-2.5/reference-to-video",
+  "voiceModel": "eleven_multilingual_sts_v2",
+  "cast": [
+    {
+      "id": "erin",
+      "name": "Erin",
+      "age": 27,
+      "appearance": "fictional adult British woman aged 27, shoulder-length dark auburn hair, fair freckled skin, olive green linen overshirt over a cream crew-neck T-shirt, dark indigo trousers",
+      "voice": "s3TPKV1kjDlVtZbl4Ksh",
+      "dialogueVoice": "Xb7hH8MSUJpSbSDYk0k2"
+    },
+    {
+      "id": "nila",
+      "name": "Nila",
+      "age": 27,
+      "appearance": "fictional adult British Sri Lankan woman aged 27, warm medium brown skin, long dark wavy hair loosely tied back, terracotta short-sleeved linen shirt and cream trousers",
+      "voice": "s3TPKV1kjDlVtZbl4Ksh",
+      "dialogueVoice": "Xb7hH8MSUJpSbSDYk0k2"
+    }
+  ],
+  "continuity": "Quiet Sri Lankan coastal guesthouse courtyard and nearby Galle streets in warm late-afternoon sunshine. Authentic everyday travel, comfortable relaxed shoulders, natural skin texture and subtle documentary cinematography. Preserve the exact cast identity and clothing from the reference.",
+  "productionPolicy": {
+    "story": "Fictional dramatisation, never a verified customer testimonial.",
+    "lipSync": "Review native spoken performance and exact content BEFORE generating final voice; convert with ElevenLabs Voice Changer preserving cadence, independently review final timing.",
+    "privacy": "Replace every original contact DP, name and photo-gallery image in every included frame. Record modifications in demo/source-edits.json.",
+    "app": "Actual supplied recordings and preserved native UI controls; demonstration edits are not evidence of a live backend update."
+  },
+  "directory": "artifacts/meet-buddy-story-en",
+  "title": "The morning I nearly missed.",
+  "feature": "Meet Buddy",
+  "opener": [
+    "ONE LAST",
+    "MORNING.",
+    "ONE NEW FRIEND."
+  ],
+  "dialogues": [
+    {
+      "id": "hook",
+      "speaker": "nila",
+      "at": 3,
+      "slot": 7,
+      "text": "Last morning in Sri Lanka. Beautiful place. Nobody to share it with. Sound familiar?",
+      "native": true
+    },
+    {
+      "id": "discover",
+      "speaker": "nila",
+      "at": 10,
+      "slot": 9,
+      "text": "Nila opened Meet Buddy on Tips to Trip and looked for travellers nearby. Someone else was ready to explore too.",
+      "native": false
+    },
+    {
+      "id": "profile",
+      "speaker": "nila",
+      "at": 19,
+      "slot": 8,
+      "text": "A profile, a shared interest, and a simple hello. She sent a meet request with a quick note.",
+      "native": false
+    },
+    {
+      "id": "pending",
+      "speaker": "nila",
+      "at": 27,
+      "slot": 7,
+      "text": "The request was sent. Then she waited for a reply. A little later, they made a plan.",
+      "native": false
+    },
+    {
+      "id": "story",
+      "speaker": "nila",
+      "at": 37,
+      "slot": 12,
+      "text": "They met for coffee, wandered through the old streets, and watched the ocean. The place was the same. The morning felt completely different.",
+      "native": false
+    },
+    {
+      "id": "cta",
+      "speaker": "nila",
+      "at": 50,
+      "slot": 7,
+      "text": "Travelling solo? Your next great story could start with hello. Find your people on Tips to Trip.",
+      "native": true
+    }
+  ],
+  "responseNote": "Hi Erin! Fancy a coffee and a walk around Weligama this morning?",
+  "meetStatus": "Coffee and exploring \u00b7 Weligama this morning. Anyone keen to join?",
+  "broll": [
+    {
+      "id": "alone",
+      "duration": 5,
+      "prompt": "Show ONLY Nila, the woman in the terracotta shirt, seated at an outdoor guesthouse cafe table with a single coffee cup and an empty chair beside her. She looks thoughtfully towards the street, then glances down at her smartphone held low, screen never visible. Reflective but comfortable and rested, no sadness or speech. Quiet natural cinematic medium shot."
+    },
+    {
+      "id": "meeting",
+      "duration": 5,
+      "prompt": "Erin, olive green overshirt, walks a few easy steps into the quiet guesthouse courtyard where Nila, terracotta shirt, is waiting beside a cafe table. They notice each other, smile and exchange one small wave, then Erin stops a comfortable distance away. Both adults visible, no hug, no handshake, no dialogue, no other people."
+    },
+    {
+      "id": "coffee",
+      "duration": 5,
+      "prompt": "Erin and Nila sit at a small outdoor cafe table with two coffee cups, sharing a quiet warm smile. Each gently lifts her own coffee cup for one small natural toast without clinking or crossing hands, then lowers it. Medium two shot, comfortable genuine friendship, no speech, no forced laughter."
+    },
+    {
+      "id": "walk",
+      "duration": 5,
+      "prompt": "Erin and Nila walk slowly side by side along a quiet Galle old-town street, white colonial wall and tropical palms behind them, sharing a natural glance. Stable tracking camera, full natural strides and relaxed hands. No dialogue, no extra people."
+    },
+    {
+      "id": "ocean",
+      "duration": 5,
+      "prompt": "Erin and Nila stand side by side on a broad safe grassy coastal promenade near Galle, seen in a medium-wide three-quarter rear view looking out at the calm blue Indian Ocean. They turn their heads slightly towards each other with tiny relaxed smiles, then look back at the sea. Gentle camera drift, no speech, no risky cliffs or rough waves."
+    }
+  ],
+  "sources": [
+    "General-assesets/Meet buddy.mov",
+    "General-assesets/Meet buddy request sending steps.mov"
+  ],
+  "narratorVoice": "s3TPKV1kjDlVtZbl4Ksh",
+  "voiceArrangement": "User-approved: Adam off-screen narrator; natural female ElevenLabs voice for reviewed native on-camera character dialogue."
+}
