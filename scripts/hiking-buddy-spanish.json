@@ -1,0 +1,120 @@
+{
+  "directory": "artifacts/hiking-buddy-es",
+  "title": "No recorras los senderos sola. Encuentra tu compañera de ruta.",
+  "duration": 60,
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "videoModel": "kling-video/v4.0/reference-to-video",
+  "voiceModel": "eleven_multilingual_sts_v2",
+  "cast": [
+    {
+      "id": "lucia",
+      "name": "Lucía",
+      "age": 27,
+      "appearance": "fictional Spanish adult woman aged 27, olive skin, brown eyes, dark chestnut hair in a loose practical low braid, a few natural freckles, muted forest-green technical hiking jacket open over an oatmeal merino T-shirt, charcoal hiking trousers, worn brown hiking boots, small ochre daypack with normal straps, minimal makeup",
+      "voice": "LJa3ob2HevhqhJuHWsps"
+    },
+    {
+      "id": "ines",
+      "name": "Inés",
+      "age": 28,
+      "appearance": "fictional Spanish adult woman aged 28, light naturally freckled skin, hazel eyes, copper brown wavy hair in a practical low ponytail, muted clay-red hiking fleece over a grey T-shirt, dark navy hiking trousers, worn grey hiking boots, small slate-blue daypack with normal straps, minimal makeup",
+      "voice": "Xb7hH8MSUJpSbSDYk0k2"
+    }
+  ],
+  "continuity": "Picos de Europa near Potes, Cantabria, northern Spain: broad accessible limestone mountain foothill trail, green meadow slopes and pale rugged limestone peaks, oak woodland, realistic soft clear early-autumn morning sunlight, dry trail. No tropical vegetation, snowy alpine summit, exposed ridge, cliff edge or dangerous scrambling. Preserve both adult women's exact faces, braids or ponytail, jacket colours, backpacks and light direction. Realistic unhurried walking and comfortable breathing.",
+  "dialogues": [
+    {
+      "id": "hook",
+      "speaker": "lucia",
+      "at": 0,
+      "slot": 8,
+      "native": true,
+      "text": "¿Te encanta el senderismo, pero no tienes con quién ir? ¡No tienes que explorar sola!"
+    },
+    {
+      "id": "intro",
+      "speaker": "lucia",
+      "at": 8,
+      "slot": 7,
+      "native": true,
+      "text": "Con Tips to Trip y Meet Buddy, encuentra viajeros cerca de ti con tus mismos intereses."
+    },
+    {
+      "id": "demo",
+      "speaker": "lucia",
+      "at": 16,
+      "slot": 15,
+      "native": false,
+      "text": "Abre Meet Buddy y comparte tu plan en tu estado: dónde estás y qué ruta te apetece hacer. Guárdalo para que otros viajeros puedan encontrarte. ¡Así de fácil!",
+      "voiceFile": "demo-clean.wav",
+      "captionTiming": "scribe",
+      "playbackSpeed": 0.82
+    },
+    {
+      "id": "response",
+      "speaker": "lucia",
+      "at": 34,
+      "slot": 5,
+      "native": false,
+      "text": "¡Mira! Otra viajera de la zona quiere apuntarse."
+    },
+    {
+      "id": "hello",
+      "speaker": "lucia",
+      "at": 41,
+      "slot": 4,
+      "native": true,
+      "text": "¡Hola! ¿Tú eres la que respondió a mi plan?",
+      "nativeFile": "native-hello-v2.mp4",
+      "captionWordOverrides": [
+        {
+          "index": 1,
+          "start": 2.073,
+          "reason": "Scribe attaches Tú to the preceding 1.17-second silence. Actual second phrase onset from native waveform is 2.073s and the rounded Tú mouth shape is visible at 2.0-2.1s. Caption-only correction; audio and picture unchanged."
+        }
+      ]
+    },
+    {
+      "id": "ready",
+      "speaker": "ines",
+      "at": 45,
+      "slot": 3,
+      "native": true,
+      "text": "¡Sí! ¿Lista para una aventura?"
+    },
+    {
+      "id": "lets-go",
+      "speaker": "lucia",
+      "at": 48,
+      "slot": 2,
+      "native": true,
+      "text": "¡Claro! ¡Vamos!"
+    },
+    {
+      "id": "cta",
+      "speaker": "lucia",
+      "at": 50,
+      "slot": 9,
+      "native": false,
+      "text": "No te pierdas experiencias increíbles por viajar sola. Encuentra a tu gente con Meet Buddy de Tips to Trip. ¡Tu próxima aventura empieza aquí!",
+      "playbackSpeed": 0.95
+    }
+  ],
+  "responseNote": "¡Hola! Yo también estoy en Potes. ¡Me encantaría acompañarte en la ruta!",
+  "productionPolicy": {
+    "story": "Fictional realistic dramatisation; not a verified customer testimonial.",
+    "app": "Actual supplied Meet Buddy recordings and native controls. Fictional Spanish status, locations, names, portraits and request note are authorised story demonstration edits and must be recorded in demo/source-edits.json. Meet Buddy uses Travel Status with Save, so do not invent a create-post/publish flow.",
+    "request": "Show Inés composing her fictional response in the native Live meet request interface. Keep Request sent awaiting response. No real message is sent; the next-day hiking meeting is a fictional story time jump.",
+    "lipSync": "Review native Kling 4.0 Spanish performance and mouth motion before generating final ElevenLabs voices. Then preserve native cadence with eleven_multilingual_sts_v2, recheck timing and final visible performance. No automatic approval from transcripts.",
+    "format": "60 seconds, 720x1280, 30 fps; Kling source 1080p, Spanish captions above platform controls, supplied upper-right logo throughout."
+  },
+  "voiceCasting": {
+    "lucia": "Reuse reviewed Spanish voice LJa3ob2HevhqhJuHWsps for fresh cadence-preserving speech.",
+    "ines": "Distinct multilingual adult female voice; preserve native Spanish pronunciation and cadence."
+  },
+  "language": "es",
+  "location": "Potes · Picos de Europa · España",
+  "hikingStatus": "¡Busco compañera de senderismo! Estoy en Potes y mañana quiero descubrir una ruta por los Picos de Europa. ¿Alguien por aquí se apunta? ¡Conectamos y disfrutamos de la aventura!"
+}

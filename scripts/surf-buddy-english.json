@@ -1,0 +1,107 @@
+{
+  "directory": "artifacts/surf-buddy-en",
+  "title": "Don't Surf Alone. Find Your Surf Buddy.",
+  "duration": 60,
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "videoModel": "bytedance/seedance-2.5/reference-to-video",
+  "voiceModel": "eleven_multilingual_sts_v2",
+  "cast": [
+    {
+      "id": "ella",
+      "name": "Ella",
+      "age": 25,
+      "appearance": "fictional adult British woman, age 25, chestnut brown shoulder-length wavy hair loosely tied back, natural freckles, hazel eyes, muted ocean-teal long-sleeve surf rash vest and dark navy knee-length board shorts, plain off-white longboard with a narrow teal rail",
+      "voice": "Xb7hH8MSUJpSbSDYk0k2"
+    },
+    {
+      "id": "nia",
+      "name": "Nia",
+      "age": 26,
+      "appearance": "fictional adult woman, age 26, medium brown skin, dark curly hair in a relaxed low ponytail, warm dark eyes, muted terracotta long-sleeve surf rash vest and charcoal knee-length board shorts, plain pale yellow longboard",
+      "voice": "pFZP5JQG7iQjIQuC4Bku"
+    }
+  ],
+  "continuity": "Weligama Beach, Sri Lanka; broad sandy horseshoe bay, small gentle beginner surf, tropical palms in the distance, soft warm morning light, modest realistic surf conditions. Both women are adults on a relaxed holiday. Preserve faces, clothing, board colours and light direction. No visible brand names on boards or clothes.",
+  "dialogues": [
+    {
+      "id": "hook",
+      "speaker": "ella",
+      "at": 0,
+      "slot": 8,
+      "native": true,
+      "text": "Hey! Love surfing but don't have anyone to surf with? You don't need to surf alone!"
+    },
+    {
+      "id": "intro",
+      "speaker": "ella",
+      "at": 8,
+      "slot": 7,
+      "native": true,
+      "text": "With Tips to Trip, use Meet Buddy to find travellers nearby who share your interests."
+    },
+    {
+      "id": "demo",
+      "speaker": "ella",
+      "at": 17,
+      "slot": 10,
+      "native": false,
+      "text": "Just open Meet Buddy, update your Travel Status, and tell other travellers what you're planning. Save it, and let them find you. It's that simple!"
+    },
+    {
+      "id": "response",
+      "speaker": "ella",
+      "at": 33,
+      "slot": 5,
+      "native": false,
+      "text": "And look! Another traveller nearby is interested in joining."
+    },
+    {
+      "id": "hello",
+      "speaker": "ella",
+      "at": 41,
+      "slot": 4,
+      "native": true,
+      "text": "Hey! You must be the one who replied!"
+    },
+    {
+      "id": "ready",
+      "speaker": "nia",
+      "at": 45,
+      "slot": 3,
+      "native": true,
+      "text": "Yes! Ready to catch some waves?"
+    },
+    {
+      "id": "lets-go",
+      "speaker": "ella",
+      "at": 48,
+      "slot": 2,
+      "native": true,
+      "text": "Absolutely! Let's go!"
+    },
+    {
+      "id": "cta",
+      "speaker": "ella",
+      "at": 50,
+      "slot": 9,
+      "native": false,
+      "text": "Don't miss out on amazing experiences just because you're travelling alone. Find your people with Tips to Trip Meet Buddy!"
+    }
+  ],
+  "surfStatus": "Looking for a Surf Buddy! Hey travellers! I'm in Weligama and planning to go surfing today. Anyone around here interested in joining me for a surf session? Let's connect and enjoy the waves together!",
+  "responseNote": "Hey! I'm also in Weligama. I'd love to join you for surfing!",
+  "productionPolicy": {
+    "story": "Fictional dramatisation of the supplied real-life scenario; never presented as a verified customer testimonial.",
+    "app": "Actual supplied app recordings and native controls. User-requested fictional surf status, names, avatars and request note are documented demonstration edits.",
+    "request": "A sent request remains awaiting a response. Transition to the beach meeting is a story time jump, not fabricated evidence of backend acceptance.",
+    "lipSync": "Generate native Higgsfield spoken performances first. Review mouth motion and intelligibility before any final ElevenLabs voice conversion. Preserve original video timing; compare converted word timing and audio envelopes. Final visible performance must be reviewed again.",
+    "timing": "60 seconds gives the greeting and complete closing voiceover room after the user's 41-second app/story setup. App introduction shortened for natural delivery; post terminology mapped to the native Travel Status feature."
+  },
+  "voiceCasting": {
+    "ella": "Alice: clear conversational British English; new performance for Ella.",
+    "nia": "Lily: distinct confident British English; new performance for Nia.",
+    "policy": "Reuse available voice identities; all campaign speech is newly performed. Convert reviewed native performances without changing timing."
+  }
+}

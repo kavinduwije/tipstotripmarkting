@@ -1,0 +1,108 @@
+{
+  "directory": "artifacts/yoga-buddy-en",
+  "title": "Don't Practise Yoga Alone. Find Your Yoga Buddy.",
+  "duration": 60,
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "videoModel": "bytedance/seedance-2.5/reference-to-video",
+  "voiceModel": "eleven_multilingual_sts_v2",
+  "cast": [
+    {
+      "id": "mia",
+      "name": "Mia",
+      "age": 27,
+      "appearance": "fictional adult British woman aged 27, strawberry blonde hair in a loose low bun, fair skin with natural freckles, soft green eyes, plain sage-green short-sleeve crew-neck athletic T-shirt, charcoal full-length leggings, barefoot, carrying a tightly rolled muted lavender yoga mat",
+      "voice": "Xb7hH8MSUJpSbSDYk0k2"
+    },
+    {
+      "id": "leila",
+      "name": "Leila",
+      "age": 28,
+      "appearance": "fictional adult British Sri Lankan woman aged 28, warm medium-brown skin, straight dark brown hair in a low braid, dark eyes, plain dusty-rose short-sleeve crew-neck athletic T-shirt, charcoal full-length leggings, barefoot, carrying a tightly rolled ochre yoga mat",
+      "voice": "pFZP5JQG7iQjIQuC4Bku"
+    }
+  ],
+  "continuity": "A quiet coastal palm garden in Weligama, Sri Lanka, a level short-grass lawn beside a simple open-sided wooden yoga pavilion, with a glimpse of the calm Indian Ocean and palms behind. Soft warm early-morning light, airy natural shadows, authentic tropical garden, no dramatic cliffs or fantasy scenery. The two women are fictional adult travellers. Preserve their faces, hair, short sleeves, full-length leggings, mat colours and morning light. No brands on clothing or mats.",
+  "dialogues": [
+    {
+      "id": "hook",
+      "speaker": "mia",
+      "at": 0,
+      "slot": 8,
+      "native": true,
+      "text": "Hey! Love yoga but don't have anyone to practise with? You don't have to do it alone!"
+    },
+    {
+      "id": "intro",
+      "speaker": "mia",
+      "at": 8,
+      "slot": 7,
+      "native": true,
+      "text": "With Tips to Trip, use Meet Buddy to find travellers around you who share your interests."
+    },
+    {
+      "id": "demo",
+      "speaker": "mia",
+      "at": 17,
+      "slot": 10,
+      "native": false,
+      "text": "Just open Meet Buddy, update your Travel Status, and tell other travellers what you're planning. Save it, and let them find you. It's that simple!"
+    },
+    {
+      "id": "response",
+      "speaker": "mia",
+      "at": 33,
+      "slot": 5,
+      "native": false,
+      "text": "And look! Another traveller nearby is interested in joining."
+    },
+    {
+      "id": "hello",
+      "speaker": "mia",
+      "at": 41,
+      "slot": 4,
+      "native": true,
+      "text": "Hey! You must be the one who replied to my post!",
+      "generationDuration": 5
+    },
+    {
+      "id": "ready",
+      "speaker": "leila",
+      "at": 45,
+      "slot": 2,
+      "native": true,
+      "text": "Yes! Ready for some yoga?"
+    },
+    {
+      "id": "lets-go",
+      "speaker": "mia",
+      "at": 47,
+      "slot": 2,
+      "native": true,
+      "text": "Absolutely! Let's go!"
+    },
+    {
+      "id": "cta",
+      "speaker": "mia",
+      "at": 49,
+      "slot": 10,
+      "native": false,
+      "text": "So, don't miss out on amazing experiences just because you're travelling alone. Find your people with Tips to Trip Meet Buddy!"
+    }
+  ],
+  "responseNote": "Hey! I'm also in Weligama. I'd love to join you for yoga!",
+  "productionPolicy": {
+    "story": "Fictional dramatisation of the supplied real-life scenario; never presented as a verified customer testimonial.",
+    "app": "Actual supplied app recordings and native controls. User-requested fictional yoga status, names, avatars and request note are documented demonstration edits.",
+    "request": "A sent request remains awaiting a response. Transition to the garden meeting is a story time jump, not fabricated evidence of backend acceptance.",
+    "lipSync": "Generate native Higgsfield spoken performances first. Review mouth motion and intelligibility before any final ElevenLabs voice conversion. Preserve original video timing; compare converted word timing and audio envelopes. Final visible performance must be reviewed again.",
+    "timing": "60 seconds, keeping the 41-second story setup and complete greeting. Meet Buddy post terminology mapped to actual native Travel Status and quick-note request flow. Walking, mat placement and a simple shared yoga practice finish the story."
+  },
+  "voiceCasting": {
+    "mia": "Alice: warm, natural conversational British English, calm and engaging; fresh performance for Mia.",
+    "leila": "Lily: distinct relaxed British English; fresh performance for Leila.",
+    "policy": "Reuse available licensed voice identities, all campaign speech newly performed. Convert reviewed native performances while preserving cadence."
+  },
+  "yogaStatus": "Looking for a Yoga Buddy! Hey travellers! I'm staying in Weligama and planning to do a yoga session this morning. Anyone around here interested in joining me? Let's connect and enjoy a peaceful yoga session together!"
+}
