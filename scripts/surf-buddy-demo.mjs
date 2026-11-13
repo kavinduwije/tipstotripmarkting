@@ -27,7 +27,7 @@ export async function prepare(){
  writeFileSync(`${dir}/demo/source-edits.json`,JSON.stringify({
  sources:['General-assesets/Meet buddy.mov','General-assesets/How to update meet buddy live user status cloud.mov','General-assesets/Meet buddy request sending steps.mov','General-assesets/Meet Buddy list view.png','General-assesets/Meet buddy screen chat cloud status example.png'],
  nativeReferences:'Frames and button crops retained from the earlier Meet Buddy production; no controls replaced by generated icons.',
- changes:['Fictional adult Ella and Nia names and avatars from the new Higgsfield cast','User-scripted Weligama surf invitation in native Travel Status','User-scripted quick-note response in the native Live meet request sheet','Cached accurate Weligama land map and fictional nearby traveller badges','Edited immediate saved status for demonstration; not backend evidence'],
+ changes:['Fictional adult Ella and Nia names and avatars from the new Higgsfield cast','User-scripted Weligama surf invitation in native Travel Status','User-scripted quick-note response in the native Live meet request sheet','Cached accurate Weligama land map and fictional nearby traveller badges','Edited immediate saved status for demonstration; not backend evidence','Profile correction: Nia Williams photo, name and username throughout the Meet Buddy profile from 27 seconds until the app sequence ends at 39.5 seconds, including the dimmed background during the request sheet. Both photos, names and handles within the Live meet request bottom sheet are retained unchanged.'],
  requestOutcome:'Request sent / awaiting response. The later beach meeting is a fictional story time jump, not a recorded acceptance.',
  mapAttribution:'© OpenStreetMap contributors',floatingControls:JSON.parse(readFileSync(`${shared}/demo/floating-controls.json`))
  },null,2));
@@ -97,7 +97,7 @@ export function statusScreen(t){
   return svg(s);
 }
 export function profileScreen(sent=false,t=0){
-  let s=image(refs.profile,0,0,604,1236)+box(160,150,280,277,'#F4FAF8',0)+avatar(-1,302,238,77,'profile-avatar')+text(302,373,'Ella Morgan',37,'#192624',700,'middle')+text(302,415,'@ellamorgan',24,'#4B5E54',400,'middle');
+  let s=image(refs.profile,0,0,604,1236)+box(160,150,280,277,'#F4FAF8',0)+avatar(3,302,238,77,'profile-avatar')+text(302,373,'Nia Williams',37,'#192624',700,'middle')+text(302,415,'@niawilliams',24,'#4B5E54',400,'middle');
   s+=box(22,680,562,68,'#F4FAF8',0)+text(31,713,'Surfing · Weligama Beach',25,'#273D35')+text(31,743,'Today · Anyone keen to join?',24,'#43675B');
   if(sent)s+=box(32,764,546,76,'#D9E3DE',38)+text(302,813,'Request sent',25,'#697C72',700,'middle')+box(0,1083,604,41,'#153F35',0)+text(302,1112,'Live buddy request sent',20,'#FFFFFF',400,'middle');
   if(t>0&&t<1)s+=buttonPointer(302,800,t);
@@ -106,14 +106,14 @@ export function profileScreen(sent=false,t=0){
 export function requestScreen(t=0){
   const note=spec.responseNote;
   const typed=note.slice(0,Math.floor(Math.min(1,t/1.15)*note.length));
-  let s=image(refs.request,0,0,604,1236)+box(160,150,280,180,'#626565',0)+`<g opacity="0.48">${avatar(-1,302,238,77,'request-profile-background')}</g>`+box(55,544,490,56,'#DEE7E3',0)+text(62,579,'Let Ella know you want to meet up.',23,'#405B4F');
+  let s=image(refs.request,0,0,604,1236)+box(160,150,280,180,'#626565',0)+`<g opacity="0.48">${avatar(3,302,238,77,'request-profile-background')}</g>`+box(55,544,490,56,'#DEE7E3',0)+text(62,579,'Let Ella know you want to meet up.',23,'#405B4F');
   s+=box(95,628,415,161,'#DEE7E3',0)+`<defs><clipPath id="nia-note"><circle cx="176" cy="676" r="36"/></clipPath></defs><image href="${data(`${dir}/nia-avatar.png`)}" x="140" y="640" width="72" height="72" clip-path="url(#nia-note)"/>`+avatar(-1,431,676,36,'request-other')+text(302,688,'↔',35,'#087E74',700,'middle')+text(176,745,'Nia Williams',23,'#1D382D',700,'middle')+text(176,775,'@niawilliams',20,'#54655C',400,'middle')+text(431,745,'Ella Morgan',23,'#1D382D',700,'middle')+text(431,775,'@ellamorgan',20,'#54655C',400,'middle');
   s+=box(65,827,479,154,'#E4ECE8',17)+wrap(typed,32).map((line,i)=>text(88,866+i*31,line,22,'#2A4438')).join('')+box(426,990,119,35,'#E7EFEA',0)+text(522,1019,typed.length+'/500',20,'#53645A',400,'end');
   if(t>1.6)s+=buttonPointer(381,1081,(t-1.6)/.5);
   return svg(s);
 }
 export function profileRecordingPatch(){
- return svg(box(160,150,280,277,'#F4FAF8',0)+avatar(-1,302,238,77,'recorded-ella')+text(302,373,'Ella Morgan',37,'#192624',700,'middle')+text(302,415,'@ellamorgan',24,'#4B5E54',400,'middle')+box(22,680,562,68,'#F4FAF8',0)+text(31,713,'Surfing · Weligama Beach',25,'#273D35')+text(31,743,'Today · Anyone keen to join?',24,'#43675B'));
+ return svg(box(160,150,280,277,'#F4FAF8',0)+avatar(3,302,238,77,'recorded-nia')+text(302,373,'Nia Williams',37,'#192624',700,'middle')+text(302,415,'@niawilliams',24,'#4B5E54',400,'middle')+box(22,680,562,68,'#F4FAF8',0)+text(31,713,'Surfing · Weligama Beach',25,'#273D35')+text(31,743,'Today · Anyone keen to join?',24,'#43675B'));
 }
 export function requestsScreen(){
   return svg(image(refs.requests,0,0,604,1236)+box(18,227,480,97,'#F4FAF8',0)+avatar(3,58,271,30,'sent-avatar')+text(126,266,'Ella Morgan',25,'#243D32')+text(126,304,'Awaiting response',23,'#4C6559'));
